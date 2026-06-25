@@ -94,9 +94,18 @@ body {
 }
 
 /* Slow Ken Burns drift on each scene */
-#scene-1 { animation: kb-1 18s ease-in-out infinite alternate; }
-#scene-2 { animation: kb-2 22s ease-in-out infinite alternate; }
-#scene-3 { animation: kb-3 20s ease-in-out infinite alternate; }
+#scene-1 {
+  animation: kb-1 18s ease-in-out infinite alternate;
+  background: radial-gradient(circle at 50% 50%, #0d1633 0%, #030712 70%, #01040a 100%);
+}
+#scene-2 {
+  animation: kb-2 22s ease-in-out infinite alternate;
+  background: radial-gradient(circle at 40% 60%, #1e194f 0%, #0f0a2b 50%, #03020c 100%);
+}
+#scene-3 {
+  animation: kb-3 20s ease-in-out infinite alternate;
+  background: linear-gradient(180deg, #03020c 0%, #0a0620 40%, #2b0e03 80%, #401802 100%);
+}
 
 @keyframes kb-1 {
   from { transform: scale(1.04) translate(0, 0); }
