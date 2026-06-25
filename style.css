@@ -701,3 +701,80 @@ body { cursor: none; }
   .vel-key { font-size: 0.4rem; }
   .vel-val { font-size: 0.75rem; }
 }
+
+/* ═══════════════════════════════════════════════════
+   3D TILT & SHINE EFFECTS
+   Interactive cinematic hover experience
+════════════════════════════════════════════════════ */
+
+.deliverable-card, .feature-card, .task-col, .mo-pillar, .la-pillar, .la-spec-block, .la-panel {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.15s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+}
+
+/* Hover glow states */
+.deliverable-card:hover {
+  border-color: rgba(168, 85, 247, 0.6) !important;
+  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.15) !important;
+}
+.feature-card:hover {
+  border-color: rgba(129, 140, 248, 0.6) !important;
+  box-shadow: 0 15px 35px rgba(129, 140, 248, 0.15) !important;
+}
+.task-col:hover {
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.12) !important;
+}
+.mo-pillar:hover {
+  border-color: rgba(245, 158, 11, 0.6) !important;
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.15) !important;
+}
+.la-pillar:hover {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15) !important;
+}
+
+/* Pop out internal card details in 3D space */
+.deliverable-card .card-icon, .feature-card .card-icon {
+  transform: translateZ(40px);
+  display: inline-block;
+}
+.deliverable-card .card-name, .feature-card .card-name {
+  transform: translateZ(30px);
+  display: block;
+}
+.deliverable-card .card-blurb, .feature-card .card-blurb {
+  transform: translateZ(20px);
+  display: block;
+}
+.deliverable-card .card-seq, .feature-card .card-seq {
+  transform: translateZ(25px);
+  display: inline-block;
+}
+
+/* Shine overlay */
+.card-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 80%);
+  z-index: 10;
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.deliverable-card:hover .card-shine,
+.feature-card:hover .card-shine,
+.task-col:hover .card-shine,
+.mo-pillar:hover .card-shine,
+.la-pillar:hover .card-shine,
+.la-spec-block:hover .card-shine,
+.la-panel:hover .card-shine {
+  opacity: 1;
+}
+

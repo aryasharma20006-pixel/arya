@@ -1938,6 +1938,57 @@ init();
 
   [s15, s16, s17, s18].forEach(el => { if (el) orbObs.observe(el); });
 
+  // ── 3D Card Tilt & Shine Init ────────────────────────────
+  function init3DTilt() {
+    const cardSelectors = [
+      '.deliverable-card',
+      '.feature-card',
+      '.task-col',
+      '.mo-pillar',
+      '.la-pillar',
+      '.la-spec-block',
+      '.la-panel'
+    ];
+    const cards = document.querySelectorAll(cardSelectors.join(', '));
+
+    cards.forEach(card => {
+      // Append shine element dynamically if not present
+      if (!card.querySelector('.card-shine')) {
+        const shine = document.createElement('div');
+        shine.className = 'card-shine';
+        card.appendChild(shine);
+      }
+
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Custom mouse position CSS vars for shine
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+
+        // Rotations calculation (max 12 degrees)
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((centerY - y) / centerY) * 12;
+        const rotateY = ((x - centerX) / centerX) * 12;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+  }
+
+  // Bind init3DTilt
+  window.addEventListener('DOMContentLoaded', init3DTilt);
+  window.addEventListener('load', init3DTilt);
+  // Also call it immediately for any elements already rendered
+  setTimeout(init3DTilt, 100);
+
   // ── Main tick ────────────────────────────────────────────
   function laTick() {
     updateSlide15();
@@ -1951,3 +2002,4 @@ init();
   laTick();
 
 })();
+
