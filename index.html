@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANTIGRAVITY — Beyond the Horizon</title>
+  <meta name="description" content="ANTIGRAVITY — A cinematic scroll experience across three phases of emergence, energy, and ascent." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="phase-foundation.css" />
+  <link rel="stylesheet" href="phase-core.css" />
+  <link rel="stylesheet" href="phase-ai.css" />
+  <link rel="stylesheet" href="phase-monetisation.css" />
+  <link rel="stylesheet" href="phase-launch.css" />
+</head>
+<body>
+
+  <!-- Fixed canvas — particle/field effects layer -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" aria-hidden="true">
+    <div id="hud-phase-label"></div>
+    <div id="hud-line"></div>
+    <div id="hud-progress-bar"><div id="hud-progress-fill"></div></div>
+  </div>
+
+  <!-- Main scroll container -->
+  <div id="scroll-container">
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 1 — THE DISCOVERY
+         Wide shot: silhouette, kanji, ink explosion
+    ══════════════════════════════════════════════ -->
+    <section id="phase-1" class="phase" aria-label="Phase 1: The Discovery">
+      <div class="phase-content" id="p1-content">
+
+        <!-- Full-bleed image layer -->
+        <div class="scene-image" id="scene-1"
+             style="background-image: url('phase1.png')">
+        </div>
+
+        <!-- Vignette & color grade overlay -->
+        <div class="scene-grade grade-1"></div>
+
+        <!-- Floating kanji -->
+        <div class="kanji-cluster" id="kanji-bg" aria-hidden="true">
+          <span>重</span><span>力</span><span>超</span><span>越</span>
+          <span>無</span><span>限</span><span>空</span><span>間</span>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container" id="logo-container">
+          <div class="logo-eyebrow" id="logo-eyebrow">emergence from void</div>
+          <div class="logo-text" id="logo-text">ANTIGRAVITY</div>
+          <div class="logo-rule"></div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint" id="scroll-hint">
+          <span>scroll to descend</span>
+          <div class="scroll-arrow"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 2 — THE EXPERIENCE
+         Mid-frame: fluid arcs, swirling forces
+    ══════════════════════════════════════════════ -->
+    <section id="phase-2" class="phase" aria-label="Phase 2: The Experience">
+      <div class="phase-content" id="p2-content">
+
+        <!-- Full-bleed image layer -->
+        <div class="scene-image" id="scene-2"
+             style="background-image: url('phase2.png')">
+        </div>
+
+        <!-- Color grade -->
+        <div class="scene-grade grade-2"></div>
+
+        <!-- Left panel text -->
+        <div class="p2-panel" id="p2-panel">
+          <span class="label-tag">FIELD ACTIVE</span>
+          <h2 class="phase-headline">Dynamic<br/>Forces</h2>
+          <p class="phase-body">Fluid arcs frozen mid-motion.<br/>Every force bends to velocity.</p>
+        </div>
+
+        <!-- Velocity readout strip -->
+        <div class="vel-readout" id="vel-readout" aria-hidden="true">
+          <div class="vel-item">
+            <span class="vel-key">FLUX</span>
+            <span class="vel-val" id="vel-flux">0.000</span>
+          </div>
+          <div class="vel-divider"></div>
+          <div class="vel-item">
+            <span class="vel-key">FIELD INTENSITY</span>
+            <span class="vel-val" id="vel-field">0.000</span>
+          </div>
+          <div class="vel-divider"></div>
+          <div class="vel-item">
+            <span class="vel-key">ORBIT VELOCITY</span>
+            <span class="vel-val" id="vel-orbit">0.0000</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 01 — FOUNDATION  (Week 1–3 · Purple)
+         Slide 02: Phase header + 6 deliverable cards
+         Slide 03: Week 1 task breakdown
+         Slide 04: Week 2–3 task breakdown
+    ══════════════════════════════════════════════ -->
+
+    <!-- ─── SLIDE 02 — Phase Header + Deliverables ─── -->
+    <section id="slide-02" class="foundation-phase" aria-label="Phase 01 Foundation: Deliverables">
+      <div class="foundation-frame">
+        <div class="foundation-bg"></div>
+        <div class="foundation-vignette"></div>
+
+        <!-- Top progress line -->
+        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s02-fill"></div></div>
+        <div class="slide-num">Slide 02</div>
+
+        <div class="foundation-content" id="s02-content">
+
+          <!-- Badge -->
+          <div class="phase-badge">
+            <div class="phase-badge-dot"></div>
+            <span class="phase-badge-label">Phase 01 · Foundation</span>
+          </div>
+
+          <!-- Title -->
+          <div class="phase-title-row">
+            <span class="phase-num-label">01</span>
+            <h2 class="phase-main-title">Foundation</h2>
+          </div>
+          <p class="phase-sub">Establish the bedrock — architecture, auth, design and pipeline.</p>
+
+          <!-- Timeline -->
+          <div class="phase-timeline">
+            <div class="phase-timeline-bar"></div>
+            <span class="phase-timeline-text">Week 1 – 3 &nbsp;·&nbsp; 6 Deliverables</span>
+          </div>
+
+          <!-- 6 Deliverable Cards -->
+          <div class="deliverables-grid" id="deliverables-grid">
+
+            <article class="deliverable-card" id="card-01" aria-label="Project Setup">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·01</span>
+              <span class="card-icon">⚙️</span>
+              <span class="card-name">Project Setup</span>
+              <p class="card-blurb">Mono-repo scaffold, environment configs, package management &amp; dev tooling.</p>
+            </article>
+
+            <article class="deliverable-card" id="card-02" aria-label="Architecture">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·02</span>
+              <span class="card-icon">🏗️</span>
+              <span class="card-name">Architecture</span>
+              <p class="card-blurb">System diagram, API contract definitions, service boundaries &amp; data flow.</p>
+            </article>
+
+            <article class="deliverable-card" id="card-03" aria-label="Authentication">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·03</span>
+              <span class="card-icon">🔐</span>
+              <span class="card-name">Auth</span>
+              <p class="card-blurb">JWT + Firebase Auth integration, role guards, token refresh flow.</p>
+            </article>
+
+            <article class="deliverable-card" id="card-04" aria-label="Database Schema">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·04</span>
+              <span class="card-icon">🗄️</span>
+              <span class="card-name">DB Schema</span>
+              <p class="card-blurb">Entity-relation model, migrations, indexing strategy &amp; seed scripts.</p>
+            </article>
+
+            <article class="deliverable-card" id="card-05" aria-label="Design System">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·05</span>
+              <span class="card-icon">🎨</span>
+              <span class="card-name">Design System</span>
+              <p class="card-blurb">Token library, component kit, typography scale &amp; dark-mode palette.</p>
+            </article>
+
+            <article class="deliverable-card" id="card-06" aria-label="CI/CD">
+              <div class="card-status-pip"></div>
+              <span class="card-seq">D·06</span>
+              <span class="card-icon">🚀</span>
+              <span class="card-name">CI / CD</span>
+              <p class="card-blurb">GitHub Actions pipeline, lint → test → build → deploy, staging gates.</p>
+            </article>
+
+          </div><!-- /deliverables-grid -->
+        </div><!-- /s02-content -->
+      </div><!-- /foundation-frame -->
+    </section>
+
+    <!-- ─── SLIDE 03 — Week 1 Task Breakdown ─── -->
+    <section id="slide-03" class="foundation-phase" aria-label="Phase 01 Foundation: Week 1 Tasks">
+      <div class="foundation-frame">
+        <div class="foundation-bg"></div>
+        <div class="foundation-vignette"></div>
+
+        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s03-fill"></div></div>
+        <div class="slide-num">Slide 03</div>
+
+        <div class="foundation-content" id="s03-content">
+
+          <!-- Week header -->
+          <div class="week-header">
+            <span class="week-eyebrow">Phase 01 · Foundation</span>
+            <h2 class="week-headline"><span class="hl">Week 1</span><br/>Task Breakdown</h2>
+            <div class="week-rule"></div>
+          </div>
+
+          <!-- 4 task columns -->
+          <div class="task-columns">
+
+            <!-- Flutter Scaffold -->
+            <div class="task-col" id="s03-col-1">
+              <div class="task-col-label">
+                <span class="col-icon-sm">📱</span>
+                Flutter Scaffold
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Init Flutter project</strong>Create mono-repo structure, configure pubspec.</span>
+                  <div class="pill-row"><span class="pill">Flutter 3</span><span class="pill">Dart</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Flavours &amp; envs</strong>Dev / staging / prod environment configs.</span>
+                  <div class="pill-row"><span class="pill">flutter_flavorizr</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Folder architecture</strong>Feature-first folder structure, barrel exports.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FastAPI Setup -->
+            <div class="task-col" id="s03-col-2">
+              <div class="task-col-label">
+                <span class="col-icon-sm">⚡</span>
+                FastAPI Setup
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Scaffold backend</strong>FastAPI app, uvicorn, ASGI middleware stack.</span>
+                  <div class="pill-row"><span class="pill">FastAPI</span><span class="pill">Python 3.12</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Router structure</strong>Versioned /v1 routes, dependency injection.</span>
+                  <div class="pill-row"><span class="pill">Pydantic v2</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Dockerise</strong>Multi-stage Dockerfile, docker-compose for local dev.</span>
+                  <div class="pill-row"><span class="pill">Docker</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Firebase Config -->
+            <div class="task-col" id="s03-col-3">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🔥</span>
+                Firebase Config
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Firebase project</strong>Create project, enable Auth &amp; Firestore.</span>
+                  <div class="pill-row"><span class="pill">Firebase</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>google-services.json</strong>Android &amp; iOS config files, SHA fingerprints.</span>
+                  <div class="pill-row"><span class="pill">FlutterFire</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Security rules</strong>Firestore &amp; Storage rules, role-based access.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- DB Schema -->
+            <div class="task-col" id="s03-col-4">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🗄️</span>
+                DB Schema
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>ER diagram</strong>Model all entities, relationships &amp; cardinalities.</span>
+                  <div class="pill-row"><span class="pill">PostgreSQL</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Alembic migrations</strong>Initial migration, versioned schema history.</span>
+                  <div class="pill-row"><span class="pill">Alembic</span><span class="pill">SQLAlchemy</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Seed data</strong>Dev fixtures, factory helpers for testing.</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /task-columns -->
+        </div><!-- /s03-content -->
+      </div><!-- /foundation-frame -->
+    </section>
+
+    <!-- ─── SLIDE 04 — Week 2–3 Task Breakdown ─── -->
+    <section id="slide-04" class="foundation-phase" aria-label="Phase 01 Foundation: Week 2-3 Tasks">
+      <div class="foundation-frame">
+        <div class="foundation-bg"></div>
+        <div class="foundation-vignette"></div>
+
+        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s04-fill"></div></div>
+        <div class="slide-num">Slide 04</div>
+
+        <div class="foundation-content" id="s04-content">
+
+          <!-- Week header -->
+          <div class="week-header">
+            <span class="week-eyebrow">Phase 01 · Foundation</span>
+            <h2 class="week-headline"><span class="hl">Week 2 – 3</span><br/>Task Breakdown</h2>
+            <div class="week-rule"></div>
+          </div>
+
+          <!-- 4 task columns -->
+          <div class="task-columns">
+
+            <!-- JWT Auth -->
+            <div class="task-col" id="s04-col-1">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🔐</span>
+                JWT Auth
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Token service</strong>Issue, refresh &amp; revoke JWT tokens via FastAPI.</span>
+                  <div class="pill-row"><span class="pill">python-jose</span><span class="pill">passlib</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Firebase + JWT bridge</strong>Verify Firebase ID token, mint backend JWT.</span>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Role guards</strong>RBAC middleware, protected route decorators.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Design System -->
+            <div class="task-col" id="s04-col-2">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🎨</span>
+                Design System
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Token library</strong>Colors, spacing, radii &amp; type scale as Dart consts.</span>
+                  <div class="pill-row"><span class="pill">ThemeData</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Component kit</strong>Button, Input, Card, AppBar, BottomNav atoms.</span>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Dark mode</strong>Adaptive palette, system brightness listener.</span>
+                  <div class="pill-row"><span class="pill">flutter_riverpod</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="task-col" id="s04-col-3">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🧭</span>
+                Navigation
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Router config</strong>go_router setup, nested shell routes.</span>
+                  <div class="pill-row"><span class="pill">go_router</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Deep links</strong>Universal links (iOS) &amp; App Links (Android).</span>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Auth redirect guards</strong>Redirect unauthenticated users, onboarding flow.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CI/CD -->
+            <div class="task-col" id="s04-col-4">
+              <div class="task-col-label">
+                <span class="col-icon-sm">🚀</span>
+                CI / CD
+              </div>
+              <div class="task-row">
+                <div class="task-dot active"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>GitHub Actions</strong>Lint → test → build matrix for Flutter &amp; Python.</span>
+                  <div class="pill-row"><span class="pill">Actions</span><span class="pill">pytest</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Staging deploy</strong>Auto-deploy backend to Cloud Run on merge to dev.</span>
+                  <div class="pill-row"><span class="pill">Cloud Run</span></div>
+                </div>
+              </div>
+              <div class="task-row">
+                <div class="task-dot"></div>
+                <div class="task-text">
+                  <span class="task-main"><strong>Test flight</strong>Fastlane for iOS beta builds, Firebase App Dist. for Android.</span>
+                  <div class="pill-row"><span class="pill">Fastlane</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /task-columns -->
+        </div><!-- /s04-content -->
+      </div><!-- /foundation-frame -->
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 02 — CORE FEATURES  (Week 4–8 · Indigo)
+         Slide 05: Phase header + 6 feature cards
+         Slide 06: Palm Reading module
+         Slide 07: Astrology & Kundli
+         Slide 08: Numerology, Compatibility & Reports
+    ═══════════════════════════════════════════ -->
+
+    <!-- ─── SLIDE 05 — Phase 02 Header + 6 Feature Cards ─── -->
+    <section id="slide-05" class="core-phase" aria-label="Phase 02 Core Features: Overview">
+      <div class="core-frame">
+        <div class="core-bg"></div>
+        <div class="core-grid"></div>
+        <div class="core-vignette"></div>
+        <div class="core-progress-bar"><div class="core-progress-fill" id="s05-fill"></div></div>
+        <div class="core-slide-num">Slide 05</div>
+
+        <div class="core-content" id="s05-content">
+          <div class="core-badge">
+            <div class="core-badge-dot"></div>
+            <span class="core-badge-label">Phase 02 · Core Features</span>
+          </div>
+          <div class="core-title-row">
+            <span class="core-num-label">02</span>
+            <h2 class="core-main-title">Core Features</h2>
+          </div>
+          <p class="core-sub">The intelligence layer — palm AI, astrology engine, numerology &amp; reporting.</p>
+          <div class="core-timeline">
+            <div class="core-timeline-bar"></div>
+            <span class="core-timeline-text">Week 4 – 8 &nbsp;·&nbsp; 6 Modules</span>
+          </div>
+
+          <div class="features-grid" id="features-grid">
+
+            <article class="feature-card fc-palm" id="fc-01" aria-label="Palm Reading">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·01</span>
+              <span class="fc-icon">🤚</span>
+              <span class="fc-name">Palm Reading</span>
+              <p class="fc-blurb">Camera capture, CV pipeline, line detection, AI scoring &amp; animated results UI.</p>
+            </article>
+
+            <article class="feature-card fc-astro" id="fc-02" aria-label="Astrology">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·02</span>
+              <span class="fc-icon">✨</span>
+              <span class="fc-name">Astrology</span>
+              <p class="fc-blurb">Birth data input, Swiss Ephemeris engine, Kundli chart generation &amp; horoscope UI.</p>
+            </article>
+
+            <article class="feature-card fc-num" id="fc-03" aria-label="Numerology">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·03</span>
+              <span class="fc-icon">🔢</span>
+              <span class="fc-name">Numerology</span>
+              <p class="fc-blurb">Life Path, Expression &amp; Soul Urge numbers with detailed personality breakdowns.</p>
+            </article>
+
+            <article class="feature-card fc-compat" id="fc-04" aria-label="Compatibility">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·04</span>
+              <span class="fc-icon">💕</span>
+              <span class="fc-name">Compatibility</span>
+              <p class="fc-blurb">Cross-module love &amp; synergy scores, side-by-side profile comparison engine.</p>
+            </article>
+
+            <article class="feature-card fc-pdf" id="fc-05" aria-label="PDF Reports">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·05</span>
+              <span class="fc-icon">📄</span>
+              <span class="fc-name">PDF Reports</span>
+              <p class="fc-blurb">Branded, shareable PDF exports with charts, scores &amp; personalised insights.</p>
+            </article>
+
+            <article class="feature-card fc-dash" id="fc-06" aria-label="Dashboard">
+              <div class="fc-pip"></div>
+              <span class="fc-seq">M·06</span>
+              <span class="fc-icon">📊</span>
+              <span class="fc-name">Dashboard</span>
+              <p class="fc-blurb">Unified history, saved readings, progress rings &amp; daily insight cards.</p>
+            </article>
+
+          </div><!-- /features-grid -->
+        </div><!-- /s05-content -->
+      </div><!-- /core-frame -->
+    </section>
+
+    <!-- ─── SLIDE 06 — Palm Reading Module ─── -->
+    <section id="slide-06" class="core-phase" aria-label="Palm Reading Module">
+      <div class="core-frame">
+        <div class="core-bg"></div>
+        <div class="core-grid"></div>
+        <div class="core-vignette"></div>
+        <div class="core-progress-bar"><div class="core-progress-fill" id="s06-fill"></div></div>
+        <div class="core-slide-num">Slide 06</div>
+
+        <div class="core-content mod-cyan" id="s06-content">
+          <!-- Module header -->
+          <div class="mod-header">
+            <span class="mod-eyebrow">Phase 02 · Module 01</span>
+            <h2 class="mod-headline"><span class="hl-mod">Palm</span> Reading</h2>
+            <div class="mod-rule"></div>
+          </div>
+
+          <div class="mod-layout">
+            <!-- Pipeline steps -->
+            <div class="mod-pipeline" id="s06-pipeline">
+
+              <div class="pipeline-step">
+                <div class="step-node active">01</div>
+                <div class="step-body">
+                  <span class="step-title">Image Capture</span>
+                  <span class="step-desc">Camera permission flow, guided hand overlay, auto-crop &amp; quality gating.</span>
+                  <div class="step-pills"><span class="step-pill">camera_plus</span><span class="step-pill">image_picker</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node active">02</div>
+                <div class="step-body">
+                  <span class="step-title">CV Pipeline</span>
+                  <span class="step-desc">MediaPipe Hands landmark detection, palm segmentation, line extraction.</span>
+                  <div class="step-pills"><span class="step-pill">MediaPipe</span><span class="step-pill">OpenCV</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node">03</div>
+                <div class="step-body">
+                  <span class="step-title">AI Scoring Engine</span>
+                  <span class="step-desc">FastAPI endpoint runs TFLite model: life, head, heart &amp; fate line scoring.</span>
+                  <div class="step-pills"><span class="step-pill">TFLite</span><span class="step-pill">FastAPI</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node">04</div>
+                <div class="step-body">
+                  <span class="step-title">Results UI</span>
+                  <span class="step-desc">Animated reveal cards, annotated palm overlay, trait wheel chart.</span>
+                  <div class="step-pills"><span class="step-pill">fl_chart</span><span class="step-pill">CustomPaint</span></div>
+                </div>
+              </div>
+
+            </div><!-- /pipeline -->
+
+            <!-- Spec blocks -->
+            <div class="mod-specs" id="s06-specs">
+
+              <div class="spec-block">
+                <span class="spec-label">Model</span>
+                <span class="spec-title">Landmark + Classification</span>
+                <p class="spec-desc">21-point hand skeleton via MediaPipe, followed by a custom TFLite classifier trained on 12 k annotated palm images.</p>
+                <div class="spec-metrics">
+                  <div class="spec-metric">
+                    <span class="spec-metric-val">94%</span>
+                    <span class="spec-metric-key">Accuracy</span>
+                  </div>
+                  <div class="spec-metric">
+                    <span class="spec-metric-val">&lt;180ms</span>
+                    <span class="spec-metric-key">Inference</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="spec-block">
+                <span class="spec-label">Lines Detected</span>
+                <span class="spec-title">Life · Head · Heart · Fate</span>
+                <p class="spec-desc">Each line scored 0–100 across depth, length &amp; curvature. Scores map to 48 trait archetypes.</p>
+              </div>
+
+              <div class="spec-block">
+                <span class="spec-label">Output</span>
+                <span class="spec-title">Reading + PDF export</span>
+                <p class="spec-desc">Personalised reading with shareable card &amp; full PDF report. Saved to user history in Firestore.</p>
+              </div>
+
+            </div><!-- /specs -->
+          </div><!-- /mod-layout -->
+        </div><!-- /s06-content -->
+      </div><!-- /core-frame -->
+    </section>
+
+    <!-- ─── SLIDE 07 — Astrology & Kundli ─── -->
+    <section id="slide-07" class="core-phase" aria-label="Astrology and Kundli Module">
+      <div class="core-frame">
+        <div class="core-bg"></div>
+        <div class="core-grid"></div>
+        <div class="core-vignette"></div>
+        <div class="core-progress-bar"><div class="core-progress-fill" id="s07-fill"></div></div>
+        <div class="core-slide-num">Slide 07</div>
+
+        <div class="core-content mod-amber" id="s07-content">
+          <div class="mod-header">
+            <span class="mod-eyebrow">Phase 02 · Module 02</span>
+            <h2 class="mod-headline"><span class="hl-mod">Astrology</span> &amp; Kundli</h2>
+            <div class="mod-rule"></div>
+          </div>
+
+          <div class="mod-layout">
+            <!-- Pipeline -->
+            <div class="mod-pipeline" id="s07-pipeline">
+
+              <div class="pipeline-step">
+                <div class="step-node active">01</div>
+                <div class="step-body">
+                  <span class="step-title">Birth Data Input</span>
+                  <span class="step-desc">Date, time &amp; place of birth with timezone auto-detection and place search.</span>
+                  <div class="step-pills"><span class="step-pill">geolocator</span><span class="step-pill">timezone_finder</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node active">02</div>
+                <div class="step-body">
+                  <span class="step-title">Ephemeris Engine</span>
+                  <span class="step-desc">Swiss Ephemeris via Python binding computes planetary positions, houses &amp; aspects.</span>
+                  <div class="step-pills"><span class="step-pill">pyswisseph</span><span class="step-pill">FastAPI</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node">03</div>
+                <div class="step-body">
+                  <span class="step-title">Kundli Chart Generation</span>
+                  <span class="step-desc">North/South Indian chart rendering, D1–D9 divisional charts, lagna &amp; rasi.</span>
+                  <div class="step-pills"><span class="step-pill">CustomPainter</span><span class="step-pill">SVG</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node">04</div>
+                <div class="step-body">
+                  <span class="step-title">Horoscope Generation</span>
+                  <span class="step-desc">LLM-augmented interpretations: daily, weekly, monthly &amp; yearly forecasts.</span>
+                  <div class="step-pills"><span class="step-pill">Gemini API</span><span class="step-pill">RAG</span></div>
+                </div>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="step-node">05</div>
+                <div class="step-body">
+                  <span class="step-title">Horoscope UI</span>
+                  <span class="step-desc">Interactive chart viewer, planet cards, transit timeline, dasha periods.</span>
+                  <div class="step-pills"><span class="step-pill">fl_chart</span><span class="step-pill">AnimatedList</span></div>
+                </div>
+              </div>
+
+            </div><!-- /pipeline -->
+
+            <!-- Spec blocks -->
+            <div class="mod-specs" id="s07-specs">
+
+              <div class="spec-block">
+                <span class="spec-label">Calculation Engine</span>
+                <span class="spec-title">Swiss Ephemeris (SE 2.10)</span>
+                <p class="spec-desc">Sub-arcsecond precision planetary data for −8000 to +16800 CE. Covers all Grahas, Upagrahas, Nakshatras &amp; house systems.</p>
+                <div class="spec-metrics">
+                  <div class="spec-metric">
+                    <span class="spec-metric-val">9</span>
+                    <span class="spec-metric-key">Grahas</span>
+                  </div>
+                  <div class="spec-metric">
+                    <span class="spec-metric-val">27</span>
+                    <span class="spec-metric-key">Nakshatras</span>
+                  </div>
+                  <div class="spec-metric">
+                    <span class="spec-metric-val">12</span>
+                    <span class="spec-metric-key">Houses</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="spec-block">
+                <span class="spec-label">Chart Systems</span>
+                <span class="spec-title">Lagna · Navamsa · Moon</span>
+                <p class="spec-desc">Rasi, D9 Navamsa, D3 Drekkana &amp; custom divisional charts rendered as interactive SVG with zoom.</p>
+              </div>
+
+              <div class="spec-block">
+                <span class="spec-label">AI Interpretations</span>
+                <span class="spec-title">Gemini 1.5 + RAG corpus</span>
+                <p class="spec-desc">300k-token Jyotish corpus with Parashari &amp; Krishnamurty paddhati rules. Streamed narrative generation.</p>
+              </div>
+
+            </div><!-- /specs -->
+          </div><!-- /mod-layout -->
+        </div><!-- /s07-content -->
+      </div><!-- /core-frame -->
+    </section>
+
+    <!-- ─── SLIDE 08 — Numerology, Compatibility & Reports ─── -->
+    <section id="slide-08" class="core-phase" aria-label="Numerology, Compatibility and Reports">
+      <div class="core-frame">
+        <div class="core-bg"></div>
+        <div class="core-grid"></div>
+        <div class="core-vignette"></div>
+        <div class="core-progress-bar"><div class="core-progress-fill" id="s08-fill"></div></div>
+        <div class="core-slide-num">Slide 08</div>
+
+        <div class="core-content" id="s08-content">
+          <div class="core-week-header">
+            <span class="core-week-eyebrow">Phase 02 · Modules 03–05</span>
+            <h2 class="core-week-headline"><span class="hl-in">Numerology</span>, Compatibility<br/>&amp; Reports</h2>
+            <div class="core-week-rule"></div>
+          </div>
+
+          <div class="trio-columns">
+
+            <!-- Numerology -->
+            <div class="trio-col tc-green" id="s08-col-1">
+              <div class="trio-col-head">
+                <span class="trio-col-icon">🔢</span>
+                <span class="trio-col-title">Numerology</span>
+              </div>
+              <div class="trio-col-accent"></div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Name + DOB parser</strong>Pythagorean &amp; Chaldean reduction logic.<span class="trio-note">python · regex</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Core numbers</strong>Life Path, Expression, Soul Urge, Personality, Birthday.<span class="trio-note">3 systems</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Personal year &amp; cycles</strong>Annual, monthly &amp; daily personal year arcs.<span class="trio-note">timeline UI</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Trait narratives</strong>AI-generated paragraphs per number archetype.<span class="trio-note">Gemini API</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Animated number wheel</strong>Custom Canvas widget, number glow on reveal.</div>
+              </div>
+            </div>
+
+            <!-- Compatibility -->
+            <div class="trio-col tc-pink" id="s08-col-2">
+              <div class="trio-col-head">
+                <span class="trio-col-icon">💕</span>
+                <span class="trio-col-title">Compatibility</span>
+              </div>
+              <div class="trio-col-accent"></div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Profile pairing</strong>Link two user profiles or enter partner details.<span class="trio-note">Firestore refs</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Cross-module scoring</strong>Weighted score from palm, astro &amp; numerology signals.<span class="trio-note">0–100 scale</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Dimension breakdown</strong>Love, career, communication, trust &amp; growth axes.</div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Side-by-side charts</strong>Dual Kundli overlay, synastry aspects table.<span class="trio-note">CustomPainter</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Shareable card</strong>Instagram-ready score card with gradient branding.</div>
+              </div>
+            </div>
+
+            <!-- PDF Reports -->
+            <div class="trio-col tc-orange" id="s08-col-3">
+              <div class="trio-col-head">
+                <span class="trio-col-icon">📄</span>
+                <span class="trio-col-title">PDF Reports</span>
+              </div>
+              <div class="trio-col-accent"></div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Template engine</strong>ReportLab / WeasyPrint server-side PDF with brand tokens.<span class="trio-note">FastAPI</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot on"></div>
+                <div class="trio-text"><strong>Sections</strong>Palm scan, Kundli chart, numerology table, compatibility matrix.<span class="trio-note">30+ pages</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Chart embedding</strong>SVG Kundli, palm annotated image, score ring charts.</div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Delivery</strong>Signed GCS URL, in-app viewer &amp; native share sheet.<span class="trio-note">Cloud Storage</span></div>
+              </div>
+              <div class="trio-step">
+                <div class="trio-dot"></div>
+                <div class="trio-text"><strong>Premium gate</strong>Freemium: 1 free PDF/month, subscription unlocks unlimited.<span class="trio-note">RevenueCat</span></div>
+              </div>
+            </div>
+
+          </div><!-- /trio-columns -->
+        </div><!-- /s08-content -->
+      </div><!-- /core-frame -->
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 03 — AI & INTELLIGENCE (Week 9–12 · Teal)
+         Slide 09: Phase header + 6 AI module cards
+         Slide 10: AI Chat engine + Voice pipeline
+         Slide 11: Push intelligence + Performance optimization
+    ═══════════════════════════════════════════ -->
+
+    <!-- ─── SLIDE 09 — Phase 03 Header + 6 AI Module Cards ─── -->
+    <section id="slide-09" class="ai-phase" aria-label="Phase 03 AI and Intelligence: Overview">
+      <div class="ai-frame">
+        <div class="ai-bg"></div>
+        <div class="ai-grid"></div>
+        <div class="ai-vignette"></div>
+        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s09-fill"></div></div>
+        <div class="ai-slide-num">Slide 09</div>
+
+        <div class="ai-content" id="s09-content">
+          <div class="ai-badge">
+            <div class="ai-badge-dot"></div>
+            <span class="ai-badge-label">Phase 03 · AI &amp; Intelligence</span>
+          </div>
+          <div class="ai-title-row">
+            <span class="ai-num-label">03</span>
+            <h2 class="ai-main-title">AI &amp; Intelligence</h2>
+          </div>
+          <p class="ai-sub">The brain — conversational AI, voice, personalization &amp; real-time data.</p>
+          <div class="ai-timeline">
+            <div class="ai-timeline-bar"></div>
+            <span class="ai-timeline-text">Week 9 – 12 &nbsp;·&nbsp; 6 Systems</span>
+          </div>
+
+          <div class="ai-grid-cards" id="ai-cards-grid">
+
+            <article class="ai-card ac-chat" id="ai-c01" aria-label="AI Chat">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·01</span>
+              <span class="ai-card-icon">🤖</span>
+              <span class="ai-card-name">AI Chat</span>
+              <p class="ai-card-blurb">Gemini-powered conversational oracle with context-aware reading summaries.</p>
+            </article>
+
+            <article class="ai-card ac-voice" id="ai-c02" aria-label="Voice I/O">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·02</span>
+              <span class="ai-card-icon">🎙️</span>
+              <span class="ai-card-name">Voice I/O</span>
+              <p class="ai-card-blurb">STT input &amp; TTS output pipeline with streaming audio and language detection.</p>
+            </article>
+
+            <article class="ai-card ac-persona" id="ai-c03" aria-label="Personalization">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·03</span>
+              <span class="ai-card-icon">🧠</span>
+              <span class="ai-card-name">Personalization</span>
+              <p class="ai-card-blurb">User affinity engine — reading history, preference vectors &amp; adaptive UI.</p>
+            </article>
+
+            <article class="ai-card ac-push" id="ai-c04" aria-label="Push Alerts">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·04</span>
+              <span class="ai-card-icon">🔔</span>
+              <span class="ai-card-name">Push Alerts</span>
+              <p class="ai-card-blurb">Smart notification engine — daily horoscope, transits, lucky day &amp; reminders.</p>
+            </article>
+
+            <article class="ai-card ac-lang" id="ai-c05" aria-label="Multi-language">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·05</span>
+              <span class="ai-card-icon">🌐</span>
+              <span class="ai-card-name">Multi-language</span>
+              <p class="ai-card-blurb">i18n/l10n for 8 languages — Hindi, Tamil, Telugu, Bengali, Kannada + more.</p>
+            </article>
+
+            <article class="ai-card ac-ws" id="ai-c06" aria-label="WebSocket">
+              <div class="ai-card-pip"></div>
+              <span class="ai-card-seq">S·06</span>
+              <span class="ai-card-icon">⚡</span>
+              <span class="ai-card-name">WebSocket</span>
+              <p class="ai-card-blurb">Real-time channel for live chat, transit alerts &amp; streaming AI narration.</p>
+            </article>
+
+          </div><!-- /ai-grid-cards -->
+        </div><!-- /s09-content -->
+      </div><!-- /ai-frame -->
+    </section>
+
+    <!-- ─── SLIDE 10 — AI Chat Engine + Voice Pipeline ─── -->
+    <section id="slide-10" class="ai-phase" aria-label="AI Chat Engine and Voice Pipeline">
+      <div class="ai-frame">
+        <div class="ai-bg"></div>
+        <div class="ai-grid"></div>
+        <div class="ai-vignette"></div>
+        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s10-fill"></div></div>
+        <div class="ai-slide-num">Slide 10</div>
+
+        <div class="ai-content" id="s10-content">
+          <div class="ai-mod-header">
+            <span class="ai-mod-eyebrow">Phase 03 · Systems 01–02</span>
+            <h2 class="ai-mod-headline"><span class="hl-tl">AI Chat</span> &amp; Voice</h2>
+            <div class="ai-mod-rule"></div>
+          </div>
+
+          <div class="dual-pipeline" id="s10-pipelines">
+
+            <!-- AI Chat pipeline -->
+            <div class="pc-teal">
+              <div class="pipe-col-head">
+                <span class="pipe-col-icon">🤖</span>
+                <span class="pipe-col-title">AI Chat Engine</span>
+              </div>
+              <div class="pipe-col-accent"></div>
+
+              <div class="ai-step">
+                <div class="ai-step-node on">01</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Session management</span>
+                  <span class="ai-step-desc">Multi-turn conversation context with Firestore-backed session history &amp; expiry.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Firestore</span><span class="ai-step-pill">UUID</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node on">02</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Prompt engineering</span>
+                  <span class="ai-step-desc">System-prompt layer injects user's palm, astro &amp; numerology context per query.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini 1.5 Pro</span><span class="ai-step-pill">RAG</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">03</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Streaming response</span>
+                  <span class="ai-step-desc">Server-sent events stream tokens to Flutter via WebSocket — typewriter effect UI.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">SSE</span><span class="ai-step-pill">WebSocket</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">04</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Action cards</span>
+                  <span class="ai-step-desc">Structured JSON responses render as interactive reading, chart or report cards inline.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">function_call</span><span class="ai-step-pill">Flutter</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">05</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Safety &amp; moderation</span>
+                  <span class="ai-step-desc">Content filtering, rate limiting per tier &amp; jailbreak guard via safety settings API.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini Safety</span><span class="ai-step-pill">Redis</span></div>
+                </div>
+              </div>
+
+            </div><!-- /chat pipeline -->
+
+            <!-- Voice pipeline -->
+            <div class="pc-violet">
+              <div class="pipe-col-head">
+                <span class="pipe-col-icon">🎙️</span>
+                <span class="pipe-col-title">Voice I/O Pipeline</span>
+              </div>
+              <div class="pipe-col-accent"></div>
+
+              <div class="ai-step">
+                <div class="ai-step-node on">01</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">STT — Speech to Text</span>
+                  <span class="ai-step-desc">On-device Whisper.cpp (offline) + Google Speech-to-Text for Hindi &amp; regional langs.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Whisper.cpp</span><span class="ai-step-pill">Speech API</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node on">02</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Language detection</span>
+                  <span class="ai-step-desc">Auto-detect spoken language from audio fingerprint; route to correct i18n prompt.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">langdetect</span><span class="ai-step-pill">FastAPI</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">03</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">AI processing</span>
+                  <span class="ai-step-desc">Transcribed text fed to the same Gemini chat engine; response generated with voice flag.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini 1.5 Pro</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">04</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">TTS — Text to Speech</span>
+                  <span class="ai-step-desc">Google Cloud TTS with Neural2 voices — female Hindi &amp; English, streamed MP3 chunks.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Cloud TTS</span><span class="ai-step-pill">Neural2</span></div>
+                </div>
+              </div>
+
+              <div class="ai-step">
+                <div class="ai-step-node">05</div>
+                <div class="ai-step-body">
+                  <span class="ai-step-title">Waveform UI</span>
+                  <span class="ai-step-desc">Animated audio waveform visualiser synced to TTS playback with pause/replay controls.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">CustomPainter</span><span class="ai-step-pill">AudioPlayers</span></div>
+                </div>
+              </div>
+
+            </div><!-- /voice pipeline -->
+          </div><!-- /dual-pipeline -->
+        </div><!-- /s10-content -->
+      </div><!-- /ai-frame -->
+    </section>
+
+    <!-- ─── SLIDE 11 — Push Intelligence + Performance Optimization ─── -->
+    <section id="slide-11" class="ai-phase" aria-label="Push Intelligence and Performance Optimization">
+      <div class="ai-frame">
+        <div class="ai-bg"></div>
+        <div class="ai-grid"></div>
+        <div class="ai-vignette"></div>
+        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s11-fill"></div></div>
+        <div class="ai-slide-num">Slide 11</div>
+
+        <div class="ai-content" id="s11-content">
+          <div class="ai-mod-header">
+            <span class="ai-mod-eyebrow">Phase 03 · Systems 04 &amp; Perf</span>
+            <h2 class="ai-mod-headline"><span class="hl-tl">Push</span> &amp; Performance</h2>
+            <div class="ai-mod-rule"></div>
+          </div>
+
+          <div class="ai-split" id="s11-split">
+
+            <!-- Push Intelligence panel -->
+            <div class="split-panel sp-orange" id="s11-panel-1">
+              <div class="split-panel-head">
+                <span class="split-panel-icon">🔔</span>
+                <span class="split-panel-title">Push Intelligence</span>
+              </div>
+              <div class="split-panel-rule"></div>
+
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>FCM integration</strong>Firebase Cloud Messaging with topic &amp; token-based targeting.<span class="split-note">flutter_local_notifications</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>Scheduled horoscope push</strong>Daily planetary brief at user-preferred time via Cloud Scheduler.<span class="split-note">Cloud Scheduler · Pub/Sub</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>Transit alerts</strong>Auto-notify when Mercury retrograde, eclipse season or key Dasha periods begin.<span class="split-note">pyswisseph</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot"></div>
+                <div class="split-text"><strong>Smart send-time optimisation</strong>ML model learns per-user open-rate patterns, adjusts delivery window.<span class="split-note">BigQuery ML</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot"></div>
+                <div class="split-text"><strong>In-app inbox</strong>Persistent notification centre with read/unread state &amp; deep-link routing.<span class="split-note">Firestore</span></div>
+              </div>
+
+              <div class="split-metrics">
+                <div class="split-chip">
+                  <span class="split-chip-val">8+</span>
+                  <span class="split-chip-key">Languages</span>
+                </div>
+                <div class="split-chip">
+                  <span class="split-chip-val">&lt;2s</span>
+                  <span class="split-chip-key">Delivery</span>
+                </div>
+                <div class="split-chip">
+                  <span class="split-chip-val">24/7</span>
+                  <span class="split-chip-key">Scheduler</span>
+                </div>
+              </div>
+            </div><!-- /push panel -->
+
+            <!-- Performance Optimization panel -->
+            <div class="split-panel sp-emerald" id="s11-panel-2">
+              <div class="split-panel-head">
+                <span class="split-panel-icon">⚡</span>
+                <span class="split-panel-title">Performance Optimization</span>
+              </div>
+              <div class="split-panel-rule"></div>
+
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>Cold start reduction</strong>Lazy-loaded routes, deferred imports &amp; Dart AOT compilation targets &lt;1.2s launch.<span class="split-note">flutter_native_splash</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>API response caching</strong>Redis TTL cache for ephemeris &amp; horoscope endpoints — 95% cache hit rate target.<span class="split-note">Redis · Cloud Run</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot on"></div>
+                <div class="split-text"><strong>Image pipeline</strong>WebP conversion, CDN delivery &amp; progressive loading for palm scan images.<span class="split-note">Cloud CDN · ImageKit</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot"></div>
+                <div class="split-text"><strong>Frame-rate profiling</strong>Flutter DevTools integration — target 60 fps jank-free scroll &amp; animation.<span class="split-note">DevTools · Perfetto</span></div>
+              </div>
+              <div class="split-row">
+                <div class="split-dot"></div>
+                <div class="split-text"><strong>Bundle size audit</strong>Tree-shaking, font subsetting, SVG asset optimisation — target &lt;25 MB APK.<span class="split-note">dart2js · proguard</span></div>
+              </div>
+
+              <div class="split-metrics">
+                <div class="split-chip">
+                  <span class="split-chip-val">&lt;1.2s</span>
+                  <span class="split-chip-key">Launch</span>
+                </div>
+                <div class="split-chip">
+                  <span class="split-chip-val">95%</span>
+                  <span class="split-chip-key">Cache Hit</span>
+                </div>
+                <div class="split-chip">
+                  <span class="split-chip-val">60fps</span>
+                  <span class="split-chip-key">Target</span>
+                </div>
+              </div>
+            </div><!-- /performance panel -->
+
+          </div><!-- /ai-split -->
+        </div><!-- /s11-content -->
+      </div><!-- /ai-frame -->
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 04 — MONETISATION (Week 13–15 · Amber)
+         Slide 12: Phase header + 4 revenue pillar cards
+         Slide 13: Payment integration & premium gates
+         Slide 14: Analytics, GST, churn & referral
+    ═══════════════════════════════════════════ -->
+
+    <!-- ─── SLIDE 12 — Phase 04 Header + 4 Revenue Pillars ─── -->
+    <section id="slide-12" class="mo-phase" aria-label="Phase 04 Monetisation: Overview">
+      <div class="mo-frame">
+        <div class="mo-bg"></div>
+        <div class="mo-grid"></div>
+        <div class="mo-vignette"></div>
+        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s12-fill"></div></div>
+        <div class="mo-slide-num">Slide 12</div>
+
+        <div class="mo-content" id="s12-content">
+          <div class="mo-badge">
+            <div class="mo-badge-dot"></div>
+            <span class="mo-badge-label">Phase 04 · Monetisation</span>
+          </div>
+          <div class="mo-title-row">
+            <span class="mo-num-label">04</span>
+            <h2 class="mo-main-title">Monetisation</h2>
+          </div>
+          <p class="mo-sub">Turn engagement into revenue — Razorpay, premium gates, upsells &amp; analytics.</p>
+          <div class="mo-timeline">
+            <div class="mo-timeline-bar"></div>
+            <span class="mo-timeline-text">Week 13 – 15 &nbsp;·&nbsp; 4 Pillars</span>
+          </div>
+
+          <div class="mo-pillars" id="mo-pillars-grid">
+
+            <article class="mo-pillar mc-pay" id="mp-01" aria-label="Razorpay SDK">
+              <div class="mo-pillar-pip"></div>
+              <span class="mo-pillar-seq">P·01</span>
+              <span class="mo-pillar-icon">💳</span>
+              <span class="mo-pillar-name">Razorpay SDK</span>
+              <p class="mo-pillar-blurb">UPI, card, wallet &amp; EMI payments with webhook-driven order lifecycle &amp; refunds.</p>
+              <div class="mo-pillar-pills">
+                <span class="mo-pill">Razorpay</span>
+                <span class="mo-pill">FastAPI</span>
+                <span class="mo-pill">Webhooks</span>
+              </div>
+            </article>
+
+            <article class="mo-pillar mc-gate" id="mp-02" aria-label="Premium Gates">
+              <div class="mo-pillar-pip"></div>
+              <span class="mo-pillar-seq">P·02</span>
+              <span class="mo-pillar-icon">🔒</span>
+              <span class="mo-pillar-name">Premium Gates</span>
+              <p class="mo-pillar-blurb">Feature-level access control — free tier, Pro &amp; Premium with graceful upgrade prompts.</p>
+              <div class="mo-pillar-pills">
+                <span class="mo-pill">RevenueCat</span>
+                <span class="mo-pill">Firestore</span>
+              </div>
+            </article>
+
+            <article class="mo-pillar mc-upsell" id="mp-03" aria-label="Yearly Upsell">
+              <div class="mo-pillar-pip"></div>
+              <span class="mo-pillar-seq">P·03</span>
+              <span class="mo-pillar-icon">⬆️</span>
+              <span class="mo-pillar-name">Yearly Upsell</span>
+              <p class="mo-pillar-blurb">Annual plan nudge at key moments — post-reading, 30-day anniversary, lucky-day trigger.</p>
+              <div class="mo-pillar-pills">
+                <span class="mo-pill">RevenueCat</span>
+                <span class="mo-pill">Amplitude</span>
+              </div>
+            </article>
+
+            <article class="mo-pillar mc-dash" id="mp-04" aria-label="Revenue Dashboard">
+              <div class="mo-pillar-pip"></div>
+              <span class="mo-pillar-seq">P·04</span>
+              <span class="mo-pillar-icon">📈</span>
+              <span class="mo-pillar-name">Revenue Dashboard</span>
+              <p class="mo-pillar-blurb">Admin panel: MRR, ARR, churn rate, cohort LTV, plan breakdown &amp; GST reports.</p>
+              <div class="mo-pillar-pills">
+                <span class="mo-pill">BigQuery</span>
+                <span class="mo-pill">Looker Studio</span>
+              </div>
+            </article>
+
+          </div><!-- /mo-pillars -->
+        </div><!-- /s12-content -->
+      </div><!-- /mo-frame -->
+    </section>
+
+    <!-- ─── SLIDE 13 — Payment Integration & Premium Gates ─── -->
+    <section id="slide-13" class="mo-phase" aria-label="Payment Integration and Premium Gates">
+      <div class="mo-frame">
+        <div class="mo-bg"></div>
+        <div class="mo-grid"></div>
+        <div class="mo-vignette"></div>
+        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s13-fill"></div></div>
+        <div class="mo-slide-num">Slide 13</div>
+
+        <div class="mo-content" id="s13-content">
+          <div class="mo-mod-header">
+            <span class="mo-mod-eyebrow">Phase 04 · Pillars 01–02</span>
+            <h2 class="mo-mod-headline"><span class="hl-am">Payment</span> &amp; Gates</h2>
+            <div class="mo-mod-rule"></div>
+          </div>
+
+          <div class="mo-layout">
+            <!-- Payment pipeline -->
+            <div class="mo-pipeline" id="s13-pipeline">
+
+              <div class="mo-step">
+                <div class="mo-step-node on">01</div>
+                <div class="mo-step-body">
+                  <span class="mo-step-title">Order creation</span>
+                  <span class="mo-step-desc">FastAPI creates a Razorpay order, stores draft in Firestore with idempotency key.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">Razorpay API</span><span class="mo-step-pill">Firestore</span></div>
+                </div>
+              </div>
+
+              <div class="mo-step">
+                <div class="mo-step-node on">02</div>
+                <div class="mo-step-body">
+                  <span class="mo-step-title">Flutter checkout</span>
+                  <span class="mo-step-desc">Razorpay Flutter SDK surfaces native UPI, card &amp; wallet sheet with pre-filled data.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">razorpay_flutter</span><span class="mo-step-pill">UPI</span></div>
+                </div>
+              </div>
+
+              <div class="mo-step">
+                <div class="mo-step-node">03</div>
+                <div class="mo-step-body">
+                  <span class="mo-step-title">Webhook verification</span>
+                  <span class="mo-step-desc">HMAC-SHA256 signature validation on server; idempotent payment.captured handler.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">HMAC-SHA256</span><span class="mo-step-pill">Pub/Sub</span></div>
+                </div>
+              </div>
+
+              <div class="mo-step">
+                <div class="mo-step-node">04</div>
+                <div class="mo-step-body">
+                  <span class="mo-step-title">Entitlement grant</span>
+                  <span class="mo-step-desc">RevenueCat syncs Razorpay purchase; Firestore user doc updated with plan &amp; expiry.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">RevenueCat</span><span class="mo-step-pill">Cloud Functions</span></div>
+                </div>
+              </div>
+
+              <div class="mo-step">
+                <div class="mo-step-node">05</div>
+                <div class="mo-step-body">
+                  <span class="mo-step-title">Refund &amp; dispute flow</span>
+                  <span class="mo-step-desc">Admin-initiated refund via dashboard; Razorpay refund API + entitlement revocation.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">Razorpay Refunds</span></div>
+                </div>
+              </div>
+
+            </div><!-- /pipeline -->
+
+            <!-- Spec / gate blocks -->
+            <div class="mo-specs" id="s13-specs">
+
+              <div class="mo-spec-block">
+                <span class="mo-spec-label">Plan tiers</span>
+                <span class="mo-spec-title">Free · Pro · Premium</span>
+                <p class="mo-spec-desc">Free: 3 palm scans, 1 Kundli/month, limited chat. Pro: unlimited readings, PDF exports. Premium: all features + voice oracle + priority support.</p>
+                <div class="mo-spec-metrics">
+                  <div class="mo-metric"><span class="mo-metric-val">₹0</span><span class="mo-metric-key">Free</span></div>
+                  <div class="mo-metric"><span class="mo-metric-val">₹199</span><span class="mo-metric-key">Pro/mo</span></div>
+                  <div class="mo-metric"><span class="mo-metric-val">₹499</span><span class="mo-metric-key">Premium/mo</span></div>
+                </div>
+              </div>
+
+              <div class="mo-spec-block">
+                <span class="mo-spec-label">Gate implementation</span>
+                <span class="mo-spec-title">Feature flags + entitlement check</span>
+                <p class="mo-spec-desc">Every gated feature reads <code style="font-size:0.72em;color:var(--am-gold)">user.entitlement</code> from Firestore. Upgrade bottom-sheet fires on first gate hit with contextual upsell copy.</p>
+              </div>
+
+              <div class="mo-spec-block">
+                <span class="mo-spec-label">Yearly upsell</span>
+                <span class="mo-spec-title">Save 40% — ₹1,999/yr trigger</span>
+                <p class="mo-spec-desc">Shown on Day 30, post-premium reading, and on birthday. A/B tested copy via Remote Config. Amplitude events track funnel conversion.</p>
+              </div>
+
+            </div><!-- /specs -->
+          </div><!-- /mo-layout -->
+        </div><!-- /s13-content -->
+      </div><!-- /mo-frame -->
+    </section>
+
+    <!-- ─── SLIDE 14 — Analytics, GST, Churn & Referral ─── -->
+    <section id="slide-14" class="mo-phase" aria-label="Revenue Analytics, GST, Churn and Referral">
+      <div class="mo-frame">
+        <div class="mo-bg"></div>
+        <div class="mo-grid"></div>
+        <div class="mo-vignette"></div>
+        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s14-fill"></div></div>
+        <div class="mo-slide-num">Slide 14</div>
+
+        <div class="mo-content" id="s14-content">
+          <div class="mo-mod-header">
+            <span class="mo-mod-eyebrow">Phase 04 · Pillars 03–04</span>
+            <h2 class="mo-mod-headline"><span class="hl-am">Analytics</span>, GST &amp; Growth</h2>
+            <div class="mo-mod-rule"></div>
+          </div>
+
+          <div class="mo-quartet">
+
+            <!-- Revenue Analytics -->
+            <div class="mo-qcol qc-blue" id="s14-col-1">
+              <div class="mo-qcol-head">
+                <span class="mo-qcol-icon">📊</span>
+                <span class="mo-qcol-title">Revenue Analytics</span>
+              </div>
+              <div class="mo-qcol-accent"></div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>MRR &amp; ARR tracking</strong>Daily BigQuery job aggregates Razorpay events into revenue time-series.<span class="mo-qnote">BigQuery · Looker</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Cohort LTV</strong>Subscription cohort analysis — D7, D30, D90 retention &amp; lifetime value.<span class="mo-qnote">BigQuery ML</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Plan conversion funnel</strong>Amplitude tracks: free → trial → Pro → Premium conversion rates per channel.<span class="mo-qnote">Amplitude</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Admin dashboard</strong>Looker Studio report embedded in internal ops portal with date range filters.<span class="mo-qnote">Looker Studio</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Alerts</strong>Slack webhook fires on MRR dip &gt;5% or spike ≥ 2× baseline.<span class="mo-qnote">Pub/Sub · Slack</span></div>
+              </div>
+            </div>
+
+            <!-- GST Invoicing -->
+            <div class="mo-qcol qc-violet" id="s14-col-2">
+              <div class="mo-qcol-head">
+                <span class="mo-qcol-icon">🧳</span>
+                <span class="mo-qcol-title">GST Invoicing</span>
+              </div>
+              <div class="mo-qcol-accent"></div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Auto-invoice generation</strong>PDF invoice created on payment.captured — 18% GST applied on digital services.<span class="mo-qnote">WeasyPrint · GCS</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>GSTIN collection</strong>Optional B2B GSTIN field at checkout; stored &amp; printed on tax invoice.<span class="mo-qnote">Firestore</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Monthly GSTR-1 export</strong>CSV export of taxable supply data formatted for CA / Zoho Books import.<span class="mo-qnote">FastAPI · CSV</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Invoice delivery</strong>PDF emailed + available in-app under Billing history with 3-year retention.<span class="mo-qnote">SendGrid · GCS</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>RCM compliance</strong>Reverse charge flag for cloud infra costs; auto-exclusion from B2C supply list.<span class="mo-qnote">GST Act S.9(3)</span></div>
+              </div>
+            </div>
+
+            <!-- Churn Prevention -->
+            <div class="mo-qcol qc-orange" id="s14-col-3">
+              <div class="mo-qcol-head">
+                <span class="mo-qcol-icon">🔄</span>
+                <span class="mo-qcol-title">Churn Prevention</span>
+              </div>
+              <div class="mo-qcol-accent"></div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Churn prediction model</strong>BigQuery ML logistic model scores users 0–100 on 14-day churn probability.<span class="mo-qnote">BigQuery ML</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Win-back push</strong>High-risk users get personalised reading teaser + 20% off promo 3 days before renewal.<span class="mo-qnote">FCM · Amplitude</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Cancel flow survey</strong>Exit-intent sheet captures cancel reason; routes to targeted save offer or pause option.<span class="mo-qnote">RevenueCat hooks</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Grace period</strong>7-day grace after failed renewal with retry + reduced plan fallback before full cancel.<span class="mo-qnote">Razorpay retry</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Re-engagement drip</strong>Churned users enter 30-day email + push sequence with astrological hooks.<span class="mo-qnote">SendGrid</span></div>
+              </div>
+            </div>
+
+            <!-- Referral System -->
+            <div class="mo-qcol qc-emerald" id="s14-col-4">
+              <div class="mo-qcol-head">
+                <span class="mo-qcol-icon">🌟</span>
+                <span class="mo-qcol-title">Referral System</span>
+              </div>
+              <div class="mo-qcol-accent"></div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Unique referral codes</strong>6-char alphanumeric code per user; shareable deep-link with UTM attribution.<span class="mo-qnote">Firebase DL · Branch</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot on"></div>
+                <div class="mo-qtext"><strong>Dual incentive</strong>Referrer gets 1 free Pro month; referee gets 30-day Premium trial on first payment.<span class="mo-qnote">RevenueCat promo</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Fraud prevention</strong>Device fingerprint &amp; phone OTP check blocks self-referral &amp; fake account chains.<span class="mo-qnote">Firebase AppCheck</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Leaderboard</strong>Top referrers this month shown on in-app board with exclusive badge rewards.<span class="mo-qnote">Firestore</span></div>
+              </div>
+              <div class="mo-qrow">
+                <div class="mo-qdot"></div>
+                <div class="mo-qtext"><strong>Attribution analytics</strong>Amplitude source tracking: referral vs organic vs paid — per-channel LTV comparison.<span class="mo-qnote">Amplitude · UTM</span></div>
+              </div>
+            </div>
+
+          </div><!-- /mo-quartet -->
+        </div><!-- /s14-content -->
+      </div><!-- /mo-frame -->
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 05 — LAUNCH (Week 16–18 · Emerald)
+         Slide 15: Phase header + 5 launch pillars
+         Slide 16: QA testing suite & security audit
+         Slide 17: Store launch & growth marketing
+         Slide 18: 18-Week Gantt Timeline + CTA
+    ═══════════════════════════════════════════ -->
+
+    <!-- ─── SLIDE 15 — Phase 05 Header + 5 Launch Pillars ─── -->
+    <section id="slide-15" class="la-phase" aria-label="Phase 05 Launch: Overview">
+      <div class="la-frame">
+        <div class="la-bg"></div>
+        <div class="la-grid"></div>
+        <div class="la-vignette"></div>
+        <div class="la-progress-bar"><div class="la-progress-fill" id="s15-fill"></div></div>
+        <div class="la-slide-num">Slide 15</div>
+        <div class="la-content" id="s15-content">
+          <div class="la-badge">
+            <div class="la-badge-dot"></div>
+            <span class="la-badge-label">Phase 05 · Launch</span>
+          </div>
+          <div class="la-title-row">
+            <span class="la-num-label">05</span>
+            <h2 class="la-main-title">Launch</h2>
+          </div>
+          <p class="la-sub">Ship — QA, security hardening, store submissions, marketing &amp; growth analytics.</p>
+          <div class="la-timeline">
+            <div class="la-timeline-bar"></div>
+            <span class="la-timeline-text">Week 16 – 18 &nbsp;·&nbsp; 5 Pillars</span>
+          </div>
+          <div class="la-pillars" id="la-pillars-grid">
+
+            <article class="la-pillar lc-qa" id="lp-01" aria-label="QA">
+              <div class="la-pillar-pip"></div>
+              <span class="la-pillar-seq">L·01</span>
+              <span class="la-pillar-icon">✅</span>
+              <span class="la-pillar-name">QA &amp; Testing</span>
+              <p class="la-pillar-blurb">Unit, widget, integration &amp; E2E suite with 80% coverage gate on CI.</p>
+            </article>
+
+            <article class="la-pillar lc-sec" id="lp-02" aria-label="Security Audit">
+              <div class="la-pillar-pip"></div>
+              <span class="la-pillar-seq">L·02</span>
+              <span class="la-pillar-icon">🛡️</span>
+              <span class="la-pillar-name">Security Audit</span>
+              <p class="la-pillar-blurb">OWASP Mobile Top 10 review, penetration test, DAST scan &amp; certificate pinning.</p>
+            </article>
+
+            <article class="la-pillar lc-store" id="lp-03" aria-label="Store Submission">
+              <div class="la-pillar-pip"></div>
+              <span class="la-pillar-seq">L·03</span>
+              <span class="la-pillar-icon">📦</span>
+              <span class="la-pillar-name">Store Submission</span>
+              <p class="la-pillar-blurb">Play Store &amp; App Store review, ASO metadata, screenshots &amp; age rating compliance.</p>
+            </article>
+
+            <article class="la-pillar lc-mkt" id="lp-04" aria-label="Marketing">
+              <div class="la-pillar-pip"></div>
+              <span class="la-pillar-seq">L·04</span>
+              <span class="la-pillar-icon">📣</span>
+              <span class="la-pillar-name">Marketing</span>
+              <p class="la-pillar-blurb">Social launch, influencer seeding, PR outreach &amp; Day-1 organic push strategy.</p>
+            </article>
+
+            <article class="la-pillar lc-growth" id="lp-05" aria-label="Growth Analytics">
+              <div class="la-pillar-pip"></div>
+              <span class="la-pillar-seq">L·05</span>
+              <span class="la-pillar-icon">📈</span>
+              <span class="la-pillar-name">Growth Analytics</span>
+              <p class="la-pillar-blurb">Post-launch Amplitude dashboards, store listing experiments &amp; ROAS tracking.</p>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 16 — QA Testing Suite & Security Audit ─── -->
+    <section id="slide-16" class="la-phase" aria-label="QA Testing and Security Audit">
+      <div class="la-frame">
+        <div class="la-bg"></div>
+        <div class="la-grid"></div>
+        <div class="la-vignette"></div>
+        <div class="la-progress-bar"><div class="la-progress-fill" id="s16-fill"></div></div>
+        <div class="la-slide-num">Slide 16</div>
+        <div class="la-content" id="s16-content">
+          <div class="la-mod-header">
+            <span class="la-mod-eyebrow">Phase 05 · Pillars 01–02</span>
+            <h2 class="la-mod-headline"><span class="hl-em">QA</span> &amp; Security</h2>
+            <div class="la-mod-rule"></div>
+          </div>
+          <div class="la-layout">
+            <div class="la-pipeline" id="s16-pipeline">
+
+              <div class="la-step">
+                <div class="la-step-node on">01</div>
+                <div class="la-step-body">
+                  <span class="la-step-title">Unit &amp; widget tests</span>
+                  <span class="la-step-desc">Flutter test suite: business logic, BLoC states &amp; widget rendering. Target 85% line coverage.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">flutter_test</span><span class="la-step-pill">Mockito</span></div>
+                </div>
+              </div>
+
+              <div class="la-step">
+                <div class="la-step-node on">02</div>
+                <div class="la-step-body">
+                  <span class="la-step-title">Integration &amp; E2E tests</span>
+                  <span class="la-step-desc">Patrol-based E2E flows: onboarding, palm scan, payment checkout &amp; chat session.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Patrol</span><span class="la-step-pill">Firebase Test Lab</span></div>
+                </div>
+              </div>
+
+              <div class="la-step">
+                <div class="la-step-node">03</div>
+                <div class="la-step-body">
+                  <span class="la-step-title">API contract testing</span>
+                  <span class="la-step-desc">FastAPI endpoints covered by Pytest suite with coverage report uploaded to CI artifacts.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Pytest</span><span class="la-step-pill">httpx</span></div>
+                </div>
+              </div>
+
+              <div class="la-step">
+                <div class="la-step-node">04</div>
+                <div class="la-step-body">
+                  <span class="la-step-title">Accessibility audit</span>
+                  <span class="la-step-desc">Semantics tree review, screen reader (TalkBack / VoiceOver) pass &amp; contrast ratio checks.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Semantics</span><span class="la-step-pill">TalkBack</span></div>
+                </div>
+              </div>
+
+              <div class="la-step">
+                <div class="la-step-node">05</div>
+                <div class="la-step-body">
+                  <span class="la-step-title">Device matrix testing</span>
+                  <span class="la-step-desc">25-device matrix on Firebase Test Lab: Android 10–14, iOS 15–17, various screen densities.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Firebase Test Lab</span></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="la-specs" id="s16-specs">
+
+              <div class="la-spec-block">
+                <span class="la-spec-label">OWASP Mobile Top 10</span>
+                <span class="la-spec-title">Security hardening checklist</span>
+                <p class="la-spec-desc">Certificate pinning, Keystore-backed secrets, jailbreak/root detection, Frida hook guards, M1–M10 sign-off required before submission.</p>
+                <div class="la-spec-metrics">
+                  <div class="la-metric"><span class="la-metric-val">M10</span><span class="la-metric-key">Checks</span></div>
+                  <div class="la-metric"><span class="la-metric-val">0</span><span class="la-metric-key">Critical</span></div>
+                </div>
+              </div>
+
+              <div class="la-spec-block">
+                <span class="la-spec-label">Penetration test</span>
+                <span class="la-spec-title">DAST + manual pen-test</span>
+                <p class="la-spec-desc">Burp Suite DAST for API endpoints. Manual tester covers auth bypass, privilege escalation &amp; payment tampering scenarios.</p>
+              </div>
+
+              <div class="la-spec-block">
+                <span class="la-spec-label">CI quality gate</span>
+                <span class="la-spec-title">80% coverage · 0 P0 bugs</span>
+                <p class="la-spec-desc">GitHub Actions blocks merge on coverage drop, any P0 crash, Lint error or OWASP finding. Crashlytics 7-day soak at &lt;0.1% crash-free session rate.</p>
+                <div class="la-spec-metrics">
+                  <div class="la-metric"><span class="la-metric-val">80%</span><span class="la-metric-key">Coverage</span></div>
+                  <div class="la-metric"><span class="la-metric-val">&lt;0.1%</span><span class="la-metric-key">Crash rate</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 17 — Store Launch & Growth Marketing ─── -->
+    <section id="slide-17" class="la-phase" aria-label="Store Launch and Growth Marketing">
+      <div class="la-frame">
+        <div class="la-bg"></div>
+        <div class="la-grid"></div>
+        <div class="la-vignette"></div>
+        <div class="la-progress-bar"><div class="la-progress-fill" id="s17-fill"></div></div>
+        <div class="la-slide-num">Slide 17</div>
+        <div class="la-content" id="s17-content">
+          <div class="la-mod-header">
+            <span class="la-mod-eyebrow">Phase 05 · Pillars 03–05</span>
+            <h2 class="la-mod-headline"><span class="hl-em">Store</span> &amp; Growth</h2>
+            <div class="la-mod-rule"></div>
+          </div>
+          <div class="la-split" id="s17-split">
+
+            <!-- Store Submission panel -->
+            <div class="la-panel lp-gold" id="s17-p1">
+              <div class="la-panel-head">
+                <span class="la-panel-icon">📦</span>
+                <span class="la-panel-title">Store Submission</span>
+              </div>
+              <div class="la-panel-rule"></div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>ASO optimisation</strong>Keyword-rich title, short desc &amp; long desc localised for EN, HI, TA, TE.<span class="la-note">AppFollow · Sensor Tower</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>Store assets</strong>10 screenshots (EN+HI) + feature graphic + promo video (30s) per store.<span class="la-note">Figma · After Effects</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>Play Store submission</strong>Production track, staged rollout 10% → 50% → 100% over 72h monitoring window.<span class="la-note">Play Console</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot"></div>
+                <div class="la-text"><strong>App Store submission</strong>TestFlight beta (100 users, 2 weeks) → App Store review → phased release.<span class="la-note">Xcode · App Store Connect</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot"></div>
+                <div class="la-text"><strong>Rating &amp; privacy compliance</strong>Age rating 12+, privacy manifest, AT tracking transparency prompt.<span class="la-note">ATT · Google DPA</span></div>
+              </div>
+            </div>
+
+            <!-- Growth Marketing panel -->
+            <div class="la-panel lp-pink" id="s17-p2">
+              <div class="la-panel-head">
+                <span class="la-panel-icon">📣</span>
+                <span class="la-panel-title">Growth Marketing</span>
+              </div>
+              <div class="la-panel-rule"></div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>Social media launch</strong>Teaser content: 30-day countdown reels, astrology hook posts, zodiac carousels.<span class="la-note">Instagram · YouTube Shorts</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>Influencer seeding</strong>Astrology &amp; spirituality micro-influencers (10K–200K) — palm reading demo videos.<span class="la-note">Impact.com</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot on"></div>
+                <div class="la-text"><strong>PR outreach</strong>Hindi tech press + English app review sites. Goal: Day-1 feature on Play Store India.<span class="la-note">PRNEWS</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot"></div>
+                <div class="la-text"><strong>UA campaigns</strong>Meta &amp; Google UAC campaigns targeting astrology interest segments — CPI target &lt;₹45.<span class="la-note">Meta Ads · Google UAC</span></div>
+              </div>
+              <div class="la-row">
+                <div class="la-dot"></div>
+                <div class="la-text"><strong>Growth analytics</strong>Amplitude dashboard: D1/D7/D30 retention, funnel AARRR, ROAS per channel.<span class="la-note">Amplitude · Adjust</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SLIDE 18 — 18-Week Gantt Timeline Overview ─── -->
+    <section id="slide-18" class="la-phase" aria-label="18-Week Project Timeline">
+      <div class="la-frame">
+        <div class="gt-bg"></div>
+        <div class="gt-vignette"></div>
+        <div class="la-progress-bar"><div class="la-progress-fill" id="s18-fill"></div></div>
+        <div class="la-slide-num">Slide 18</div>
+        <div class="gt-content" id="s18-content">
+
+          <span class="gt-eyebrow">18-Week Roadmap · All Phases</span>
+          <h2 class="gt-title">Timeline</h2>
+          <p class="gt-sub">From project init to live on Play Store &amp; App Store.</p>
+
+          <!-- Week axis -->
+          <div class="gt-axis">
+            <div class="gt-axis-label">Phase</div>
+            <div class="gt-weeks">
+              <span class="gt-week-tick">W1</span>
+              <span class="gt-week-tick">W3</span>
+              <span class="gt-week-tick">W6</span>
+              <span class="gt-week-tick">W9</span>
+              <span class="gt-week-tick">W12</span>
+              <span class="gt-week-tick">W15</span>
+              <span class="gt-week-tick now">W18 ✓</span>
+            </div>
+          </div>
+
+          <!-- Gantt rows -->
+          <div class="gt-rows" id="gt-rows">
+
+            <!-- Phase 01 Foundation W1–3 -->
+            <div class="gt-row gt-row-0" data-width="16.67" data-left="0">
+              <span class="gt-label">01 · Foundation</span>
+              <div class="gt-track">
+                <!-- Tick lines at W3/W6/W9/W12/W15/W18 -->
+                <div class="gt-tick-lines">
+                  <div class="gt-tick-line" style="left:16.67%"></div>
+                  <div class="gt-tick-line" style="left:33.33%"></div>
+                  <div class="gt-tick-line" style="left:50%"></div>
+                  <div class="gt-tick-line" style="left:66.67%"></div>
+                  <div class="gt-tick-line" style="left:83.33%"></div>
+                </div>
+                <div class="gt-bar" style="left:0%" data-target="17%">
+                  <div class="gt-bar-inner">
+                    <span class="gt-bar-title">Foundation</span>
+                    <span class="gt-bar-wk">W1–3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 02 Core Features W4–8 -->
+            <div class="gt-row gt-row-1" data-width="27.78" data-left="16.67">
+              <span class="gt-label">02 · Core Features</span>
+              <div class="gt-track">
+                <div class="gt-tick-lines">
+                  <div class="gt-tick-line" style="left:16.67%"></div>
+                  <div class="gt-tick-line" style="left:33.33%"></div>
+                  <div class="gt-tick-line" style="left:50%"></div>
+                  <div class="gt-tick-line" style="left:66.67%"></div>
+                  <div class="gt-tick-line" style="left:83.33%"></div>
+                </div>
+                <div class="gt-bar" style="left:16.67%" data-target="28%">
+                  <div class="gt-bar-inner">
+                    <span class="gt-bar-title">Core Features</span>
+                    <span class="gt-bar-wk">W4–8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 03 AI & Intelligence W9–12 -->
+            <div class="gt-row gt-row-2" data-width="22.22" data-left="44.44">
+              <span class="gt-label">03 · AI &amp; Intelligence</span>
+              <div class="gt-track">
+                <div class="gt-tick-lines">
+                  <div class="gt-tick-line" style="left:16.67%"></div>
+                  <div class="gt-tick-line" style="left:33.33%"></div>
+                  <div class="gt-tick-line" style="left:50%"></div>
+                  <div class="gt-tick-line" style="left:66.67%"></div>
+                  <div class="gt-tick-line" style="left:83.33%"></div>
+                </div>
+                <div class="gt-bar" style="left:44.44%" data-target="22%">
+                  <div class="gt-bar-inner">
+                    <span class="gt-bar-title">AI &amp; Intelligence</span>
+                    <span class="gt-bar-wk">W9–12</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 04 Monetisation W13–15 -->
+            <div class="gt-row gt-row-3" data-width="16.67" data-left="66.67">
+              <span class="gt-label">04 · Monetisation</span>
+              <div class="gt-track">
+                <div class="gt-tick-lines">
+                  <div class="gt-tick-line" style="left:16.67%"></div>
+                  <div class="gt-tick-line" style="left:33.33%"></div>
+                  <div class="gt-tick-line" style="left:50%"></div>
+                  <div class="gt-tick-line" style="left:66.67%"></div>
+                  <div class="gt-tick-line" style="left:83.33%"></div>
+                </div>
+                <div class="gt-bar" style="left:66.67%" data-target="17%">
+                  <div class="gt-bar-inner">
+                    <span class="gt-bar-title">Monetisation</span>
+                    <span class="gt-bar-wk">W13–15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 05 Launch W16–18 -->
+            <div class="gt-row gt-row-4" data-width="16.67" data-left="83.33">
+              <span class="gt-label">05 · Launch</span>
+              <div class="gt-track">
+                <div class="gt-tick-lines">
+                  <div class="gt-tick-line" style="left:16.67%"></div>
+                  <div class="gt-tick-line" style="left:33.33%"></div>
+                  <div class="gt-tick-line" style="left:50%"></div>
+                  <div class="gt-tick-line" style="left:66.67%"></div>
+                  <div class="gt-tick-line" style="left:83.33%"></div>
+                </div>
+                <div class="gt-bar" style="left:83.33%" data-target="17%">
+                  <div class="gt-bar-inner">
+                    <span class="gt-bar-title">Launch</span>
+                    <span class="gt-bar-wk">W16–18</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /gt-rows -->
+
+          <!-- Deliverables per phase -->
+          <div class="gt-rule"></div>
+
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.6rem 1.8rem;max-width:1000px;margin-bottom:1rem;">
+            <div class="gt-deliverables">
+              <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">Flutter scaffold</span>
+              <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">Firebase auth</span>
+              <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">DB schema</span>
+              <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">CI/CD pipeline</span>
+            </div>
+            <div class="gt-deliverables">
+              <span class="gt-deliv" style="color:rgba(99,102,241,0.7)">Palm Reading</span>
+              <span class="gt-deliv" style="color:rgba(99,102,241,0.7)">Astrology engine</span>
+              <span class="gt-deliv" style="color:rgba(99,102,241,0.7)">Numerology</span>
+              <span class="gt-deliv" style="color:rgba(99,102,241,0.7)">PDF Reports</span>
+            </div>
+            <div class="gt-deliverables">
+              <span class="gt-deliv" style="color:rgba(45,212,191,0.7)">Gemini Chat</span>
+              <span class="gt-deliv" style="color:rgba(45,212,191,0.7)">Voice I/O</span>
+              <span class="gt-deliv" style="color:rgba(45,212,191,0.7)">Push engine</span>
+              <span class="gt-deliv" style="color:rgba(45,212,191,0.7)">i18n ×8 langs</span>
+            </div>
+            <div class="gt-deliverables">
+              <span class="gt-deliv" style="color:rgba(245,158,11,0.7)">Razorpay SDK</span>
+              <span class="gt-deliv" style="color:rgba(245,158,11,0.7)">Premium gates</span>
+              <span class="gt-deliv" style="color:rgba(245,158,11,0.7)">GST invoicing</span>
+              <span class="gt-deliv" style="color:rgba(245,158,11,0.7)">Referral system</span>
+            </div>
+            <div class="gt-deliverables">
+              <span class="gt-deliv" style="color:rgba(16,185,129,0.7)">QA &amp; security</span>
+              <span class="gt-deliv" style="color:rgba(16,185,129,0.7)">Store submission</span>
+              <span class="gt-deliv" style="color:rgba(16,185,129,0.7)">Marketing launch</span>
+              <span class="gt-deliv" style="color:rgba(16,185,129,0.7)">🚀 Go live</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="gt-cta-section">
+            <div class="gt-cta-copy">
+              <h3 class="gt-cta-headline">Ready to build?</h3>
+              <p class="gt-cta-sub">18 weeks · 5 phases · 1 app that reads the stars.</p>
+            </div>
+            <div class="gt-cta-buttons">
+              <button class="gt-btn-primary" id="gt-cta-start">Start the Journey</button>
+              <button class="gt-btn-ghost" id="gt-cta-deck">View Deck</button>
+            </div>
+          </div>
+
+          <!-- Phase legend -->
+          <div class="gt-legend">
+            <div class="gt-legend-item">
+              <div class="gt-legend-dot" style="background:#8b5cf6"></div>
+              <span class="gt-legend-label">Foundation</span>
+            </div>
+            <div class="gt-legend-item">
+              <div class="gt-legend-dot" style="background:#6366f1"></div>
+              <span class="gt-legend-label">Core Features</span>
+            </div>
+            <div class="gt-legend-item">
+              <div class="gt-legend-dot" style="background:#2dd4bf"></div>
+              <span class="gt-legend-label">AI &amp; Intelligence</span>
+            </div>
+            <div class="gt-legend-item">
+              <div class="gt-legend-dot" style="background:#f59e0b"></div>
+              <span class="gt-legend-label">Monetisation</span>
+            </div>
+            <div class="gt-legend-item">
+              <div class="gt-legend-dot" style="background:#10b981"></div>
+              <span class="gt-legend-label">Launch</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHASE 3 — THE FUTURE
+         Close-up: determined gaze, embers, ascent
+    ═══════════════════════════════════════════ -->
+    <section id="phase-3" class="phase" aria-label="Phase 3: The Future">
+      <div class="phase-content" id="p3-content">
+
+        <!-- Full-bleed image layer -->
+        <div class="scene-image" id="scene-3"
+             style="background-image: url('phase3.png')">
+        </div>
+
+        <!-- Color grade: cold → warm -->
+        <div class="scene-grade grade-3"></div>
+
+        <!-- Ascent copy — lower left -->
+        <div class="ascent-text" id="ascent-text">
+          <div class="ember-row" aria-hidden="true">
+            <span class="ember">✦</span>
+            <span class="ember">✦</span>
+            <span class="ember">✦</span>
+          </div>
+          <h2 class="ascent-headline">Above All<br/>Limits</h2>
+          <p class="ascent-sub">The horizon is not a boundary.<br/>It is the beginning.</p>
+          <div class="cta-group">
+            <button class="cta-primary" id="cta-enter">Enter the Field</button>
+            <button class="cta-ghost" id="cta-learn">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Final logo — lower right -->
+        <div class="final-logo" id="final-logo">
+          <div class="final-logo-text">ANTIGRAVITY</div>
+          <div class="final-tagline">beyond the horizon</div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /scroll-container -->
+
+  <script src="engine.js" type="module"></script>
+</body>
+</html>

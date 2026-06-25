@@ -1,0 +1,761 @@
+/* ═══════════════════════════════════════════════════
+   PHASE 04 — MONETISATION  (Week 13–15 · Amber)
+   Slides 12–14 in the ANTIGRAVITY scroll timeline
+════════════════════════════════════════════════════ */
+
+/* ── Amber design tokens ── */
+:root {
+  --am-void:        #0e0800;
+  --am-deep:        #1c1000;
+  --am-mid:         #451a03;
+  --am-bright:      #d97706;
+  --am-glow:        #f59e0b;
+  --am-gold:        #fbbf24;
+  --am-ice:         #fef3c7;
+  --am-accent:      #fcd34d;
+  --am-orange:      #f97316;
+  --am-rose:        #fb7185;
+  --am-line:        rgba(245, 158, 11, 0.28);
+  --am-card-bg:     rgba(69, 26, 3, 0.18);
+  --am-card-border: rgba(245, 158, 11, 0.22);
+  /* Module accent colours */
+  --mo-pay:     #f59e0b;   /* amber  – Razorpay / Payment  */
+  --mo-gate:    #fb923c;   /* orange – Premium Gates       */
+  --mo-upsell:  #fbbf24;   /* gold   – Yearly Upsell       */
+  --mo-dash:    #34d399;   /* emerald– Revenue Dashboard   */
+  /* Slide 14 column colours */
+  --mo-analytics: #60a5fa; /* blue   – Revenue Analytics   */
+  --mo-gst:       #a78bfa; /* violet – GST Invoicing       */
+  --mo-churn:     #fb923c; /* orange – Churn Prevention    */
+  --mo-referral:  #34d399; /* emerald– Referral System     */
+}
+
+/* ─────────────────────────────────────────────────
+   SHARED SLIDE SCAFFOLDING
+───────────────────────────────────────────────── */
+
+.mo-phase { position: relative; }
+
+#slide-12 { min-height: 200vh; }
+#slide-13 { min-height: 220vh; }
+#slide-14 { min-height: 200vh; }
+
+/* Sticky viewport frame */
+.mo-frame {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── Amber void background ── */
+.mo-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 85% 65% at 45% 30%, rgba(69, 26, 3, 0.65) 0%, transparent 65%),
+    radial-gradient(ellipse 110% 75% at 88% 78%, rgba(217, 119, 6, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 80%  50% at 8%  10%, rgba(249, 115, 22, 0.07) 0%, transparent 50%),
+    linear-gradient(168deg, #0c0600 0%, #1c1000 55%, #0e0800 100%);
+  z-index: 0;
+}
+
+/* Noise grain */
+.mo-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Vignette */
+.mo-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 34%, rgba(6, 3, 0, 0.84) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Fine amber grid overlay */
+.mo-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.032) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, transparent 74%);
+}
+
+/* Slide number */
+.mo-slide-num {
+  position: absolute;
+  top: 2.2rem;
+  left: 8vw;
+  font-family: var(--font-ui);
+  font-size: 0.5rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(245, 158, 11, 0.3);
+  z-index: 5;
+}
+
+/* Top progress bar */
+.mo-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(245, 158, 11, 0.1);
+  z-index: 5;
+}
+
+.mo-progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--am-bright), var(--am-gold));
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.55);
+  width: 0%;
+  transition: width 0.12s linear;
+}
+
+/* Main content area */
+.mo-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh 8vw;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.85s ease, transform 0.85s var(--ease-out-expo);
+}
+
+.mo-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────────────
+   SLIDE 12 — PHASE HEADER + 4 REVENUE CARDS
+───────────────────────────────────────────────── */
+
+.mo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.mo-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--am-glow);
+  box-shadow: 0 0 14px 3px rgba(245, 158, 11, 0.75);
+  animation: am-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes am-pulse {
+  0%, 100% { box-shadow: 0 0 14px 3px rgba(245, 158, 11, 0.75); }
+  50%       { box-shadow: 0 0 24px 8px rgba(245, 158, 11, 0.22); }
+}
+
+.mo-badge-label {
+  font-family: var(--font-ui);
+  font-size: 0.56rem;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--am-glow);
+}
+
+.mo-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.mo-num-label {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+  color: rgba(245, 158, 11, 0.45);
+  letter-spacing: 0.1em;
+}
+
+.mo-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  background: linear-gradient(138deg,
+    #fef9ee 0%,
+    var(--am-gold)   40%,
+    var(--am-orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.04em;
+}
+
+.mo-sub {
+  font-family: var(--font-ui);
+  font-size: clamp(0.72rem, 1.2vw, 0.86rem);
+  color: rgba(254, 243, 199, 0.38);
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+}
+
+.mo-timeline {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.mo-timeline-bar {
+  height: 1px;
+  width: clamp(50px, 7vw, 110px);
+  background: linear-gradient(to right, var(--am-glow), transparent);
+}
+
+.mo-timeline-text {
+  font-family: var(--font-ui);
+  font-size: 0.56rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(245, 158, 11, 0.52);
+}
+
+/* ── 4 revenue pillar cards (2×2) ── */
+.mo-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.3rem;
+  max-width: 820px;
+}
+
+.mo-pillar {
+  background: var(--am-card-bg);
+  border: 1px solid var(--am-card-border);
+  padding: 1.5rem 1.6rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    border-color 0.32s ease,
+    background 0.32s ease,
+    transform 0.32s ease;
+}
+
+.mo-pillar.card-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s var(--ease-out-expo),
+    border-color 0.32s ease,
+    background 0.32s ease;
+}
+
+/* Accent top-left bar */
+.mo-pillar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 1px;
+  background: var(--mc, var(--am-glow));
+  box-shadow: 0 0 10px var(--mc, var(--am-glow));
+}
+
+/* Hover shimmer */
+.mo-pillar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--mc, var(--am-glow)) 10%, transparent) 0%,
+    transparent 62%);
+  opacity: 0;
+  transition: opacity 0.32s ease;
+}
+
+.mo-pillar:hover {
+  border-color: color-mix(in srgb, var(--mc, var(--am-glow)) 55%, transparent);
+  background: rgba(69, 26, 3, 0.28);
+  transform: translateY(-4px);
+}
+
+.mo-pillar:hover::before { opacity: 1; }
+
+/* Per-pillar accent */
+.mc-pay     { --mc: var(--mo-pay);     }
+.mc-gate    { --mc: var(--mo-gate);    }
+.mc-upsell  { --mc: var(--mo-upsell);  }
+.mc-dash    { --mc: var(--mo-dash);    }
+
+.mo-pillar-pip {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mc, var(--am-glow));
+  box-shadow: 0 0 10px var(--mc, var(--am-glow));
+}
+
+.mo-pillar-seq {
+  font-family: var(--font-ui);
+  font-size: 0.46rem;
+  letter-spacing: 0.45em;
+  color: color-mix(in srgb, var(--mc, var(--am-glow)) 52%, transparent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.mo-pillar-icon {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+  filter: drop-shadow(0 0 6px color-mix(in srgb, var(--mc, var(--am-glow)) 58%, transparent));
+}
+
+.mo-pillar-name {
+  font-family: var(--font-ui);
+  font-size: clamp(0.8rem, 1.2vw, 0.96rem);
+  font-weight: 500;
+  color: var(--am-ice);
+  display: block;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.mo-pillar-blurb {
+  font-family: var(--font-body);
+  font-size: clamp(0.66rem, 0.95vw, 0.76rem);
+  color: rgba(254, 243, 199, 0.38);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Tech pills inside pillar */
+.mo-pillar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.75rem;
+}
+
+.mo-pill {
+  font-family: var(--font-ui);
+  font-size: 0.45rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--mc, var(--am-glow)) 78%, rgba(254, 243, 199, 0.55));
+  border: 1px solid color-mix(in srgb, var(--mc, var(--am-glow)) 26%, transparent);
+  padding: 0.15rem 0.44rem;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--mc, var(--am-glow)) 6%, transparent);
+  transition: color 0.22s, border-color 0.22s, background 0.22s;
+}
+
+.mo-pill:hover {
+  color: var(--am-ice);
+  border-color: color-mix(in srgb, var(--mc, var(--am-glow)) 52%, transparent);
+  background: color-mix(in srgb, var(--mc, var(--am-glow)) 13%, transparent);
+}
+
+/* ─────────────────────────────────────────────────
+   SLIDE 13 — PAYMENT INTEGRATION & PREMIUM GATES
+   Two-column: pipeline left, spec/gate right
+───────────────────────────────────────────────── */
+
+.mo-mod-header {
+  margin-bottom: 2rem;
+}
+
+.mo-mod-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.54rem;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--am-glow);
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+.mo-mod-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 4.8rem);
+  line-height: 0.9;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.mo-mod-headline .hl-am {
+  background: linear-gradient(90deg, var(--am-ice) 0%, var(--am-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mo-mod-rule {
+  width: clamp(60px, 10vw, 140px);
+  height: 1px;
+  background: linear-gradient(to right, var(--am-glow), transparent);
+  margin: 0.85rem 0 0;
+}
+
+/* Two-column layout */
+.mo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem 4rem;
+  max-width: 980px;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+/* Pipeline steps */
+.mo-pipeline { display: flex; flex-direction: column; gap: 0; }
+
+.mo-step {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.07);
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-14px);
+  cursor: default;
+  transition: padding-left 0.22s ease;
+}
+
+.mo-step:last-child { border-bottom: none; }
+
+.mo-step.step-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s var(--ease-out-expo),
+    padding-left 0.22s ease;
+}
+
+.mo-step:hover { padding-left: 0.4rem; }
+.mo-step:hover .mo-step-node { border-color: var(--am-glow); }
+
+.mo-step-node {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 158, 11, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-size: 0.5rem;
+  color: rgba(254, 243, 199, 0.45);
+  margin-top: 2px;
+  flex-shrink: 0;
+  position: relative;
+  transition: border-color 0.25s ease;
+}
+
+.mo-step-node.on {
+  border-color: var(--am-glow);
+  color: var(--am-glow);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
+}
+
+.mo-step-node.on::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--am-glow);
+  opacity: 0.22;
+}
+
+.mo-step-body { display: flex; flex-direction: column; gap: 0.18rem; }
+
+.mo-step-title {
+  font-family: var(--font-body);
+  font-size: clamp(0.74rem, 1.05vw, 0.82rem);
+  font-weight: 500;
+  color: var(--am-ice);
+  line-height: 1.3;
+}
+
+.mo-step-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.66rem, 0.93vw, 0.73rem);
+  color: rgba(254, 243, 199, 0.42);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+.mo-step-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  margin-top: 0.25rem;
+}
+
+.mo-step-pill {
+  font-family: var(--font-ui);
+  font-size: 0.45rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--am-glow) 78%, rgba(254, 243, 199, 0.55));
+  border: 1px solid color-mix(in srgb, var(--am-glow) 25%, transparent);
+  padding: 0.14rem 0.42rem;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--am-glow) 6%, transparent);
+  transition: color 0.22s, border-color 0.22s, background 0.22s;
+}
+
+.mo-step-pill:hover {
+  color: var(--am-ice);
+  border-color: color-mix(in srgb, var(--am-glow) 50%, transparent);
+  background: color-mix(in srgb, var(--am-glow) 13%, transparent);
+}
+
+/* Right column — spec / gate blocks */
+.mo-specs { display: flex; flex-direction: column; gap: 1rem; }
+
+.mo-spec-block {
+  background: var(--am-card-bg);
+  border: 1px solid var(--am-card-border);
+  padding: 1.1rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(14px);
+}
+
+.mo-spec-block.spec-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.55s ease, transform 0.55s var(--ease-out-expo);
+}
+
+.mo-spec-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--am-glow);
+  box-shadow: 0 0 8px var(--am-glow);
+}
+
+.mo-spec-label {
+  font-family: var(--font-ui);
+  font-size: 0.5rem;
+  letter-spacing: 0.44em;
+  text-transform: uppercase;
+  color: rgba(245, 158, 11, 0.65);
+  display: block;
+  margin-bottom: 0.55rem;
+}
+
+.mo-spec-title {
+  font-family: var(--font-ui);
+  font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+  font-weight: 500;
+  color: var(--am-ice);
+  display: block;
+  margin-bottom: 0.32rem;
+}
+
+.mo-spec-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.66rem, 0.93vw, 0.73rem);
+  color: rgba(254, 243, 199, 0.4);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Metric row inside spec */
+.mo-spec-metrics {
+  display: flex;
+  gap: 1.4rem;
+  margin-top: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.mo-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.mo-metric-val {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.75rem);
+  color: var(--am-glow);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.mo-metric-key {
+  font-family: var(--font-ui);
+  font-size: 0.44rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(254, 243, 199, 0.32);
+}
+
+/* ─────────────────────────────────────────────────
+   SLIDE 14 — ANALYTICS, GST, CHURN, REFERRAL
+   Four equal columns
+───────────────────────────────────────────────── */
+
+.mo-quartet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem 1.1rem;
+  max-width: 980px;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.mo-qcol {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.mo-qcol.qcol-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s var(--ease-out-expo);
+}
+
+/* Column head */
+.mo-qcol-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  margin-bottom: 0.8rem;
+}
+
+.mo-qcol-icon {
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 4px var(--qc, var(--am-glow)));
+}
+
+.mo-qcol-title {
+  font-family: var(--font-ui);
+  font-size: 0.56rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--qc, var(--am-glow));
+}
+
+.mo-qcol-accent {
+  height: 1px;
+  background: linear-gradient(to right, var(--qc, var(--am-glow)), transparent);
+  margin-bottom: 0.75rem;
+}
+
+/* Step rows inside quartet column */
+.mo-qrow {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.06);
+  cursor: default;
+  transition: padding-left 0.22s ease;
+}
+
+.mo-qrow:last-child { border-bottom: none; }
+.mo-qrow:hover { padding-left: 0.35rem; }
+.mo-qrow:hover .mo-qdot { border-color: var(--qc, var(--am-glow)); }
+
+.mo-qdot {
+  width: 11px;
+  height: 11px;
+  min-width: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  margin-top: 3px;
+  flex-shrink: 0;
+  position: relative;
+  transition: border-color 0.25s ease;
+}
+
+.mo-qdot.on::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--qc, var(--am-glow));
+  box-shadow: 0 0 5px var(--qc, var(--am-glow));
+}
+
+.mo-qtext {
+  font-family: var(--font-body);
+  font-size: clamp(0.66rem, 0.9vw, 0.74rem);
+  color: rgba(254, 243, 199, 0.65);
+  line-height: 1.45;
+}
+
+.mo-qtext strong {
+  font-weight: 500;
+  color: var(--am-ice);
+  display: block;
+}
+
+.mo-qnote {
+  font-size: 0.62rem;
+  color: rgba(245, 158, 11, 0.38);
+  font-style: italic;
+}
+
+/* Per-column colour overrides */
+.qc-blue    { --qc: var(--mo-analytics); }
+.qc-violet  { --qc: var(--mo-gst);       }
+.qc-orange  { --qc: var(--mo-churn);     }
+.qc-emerald { --qc: var(--mo-referral);  }
+
+/* ─────────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .mo-pillars { grid-template-columns: repeat(2, 1fr); }
+  .mo-layout  { grid-template-columns: 1fr; gap: 2rem; }
+  .mo-quartet { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .mo-main-title { font-size: 3rem; }
+}
+
+@media (max-width: 640px) {
+  .mo-pillars { grid-template-columns: 1fr; }
+  .mo-quartet { grid-template-columns: 1fr; }
+  .mo-slide-num   { left: 5vw; }
+  .mo-content     { padding: 5vh 5vw; }
+  .mo-main-title  { font-size: 2.4rem; }
+  .mo-mod-headline { font-size: 2rem; }
+}
