@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ANTIGRAVITY — Beyond the Horizon</title>
-  <meta name="description" content="ANTIGRAVITY — A cinematic scroll experience across three phases of emergence, energy, and ascent." />
+  <meta name="description"
+    content="ANTIGRAVITY — A cinematic scroll experience across three phases of emergence, energy, and ascent." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="phase-foundation.css" />
   <link rel="stylesheet" href="phase-core.css" />
@@ -15,6 +19,7 @@
   <link rel="stylesheet" href="phase-monetisation.css" />
   <link rel="stylesheet" href="phase-launch.css" />
 </head>
+
 <body>
 
   <!-- Fixed canvas — particle/field effects layer -->
@@ -24,7 +29,9 @@
   <div id="hud" aria-hidden="true">
     <div id="hud-phase-label"></div>
     <div id="hud-line"></div>
-    <div id="hud-progress-bar"><div id="hud-progress-fill"></div></div>
+    <div id="hud-progress-bar">
+      <div id="hud-progress-fill"></div>
+    </div>
   </div>
 
   <!-- Main scroll container -->
@@ -38,8 +45,7 @@
       <div class="phase-content" id="p1-content">
 
         <!-- Full-bleed image layer -->
-        <div class="scene-image" id="scene-1"
-             style="background-image: url('phase1.png')">
+        <div class="scene-image" id="scene-1" style="background-image: url('phase1.png')">
         </div>
 
         <!-- Vignette & color grade overlay -->
@@ -75,8 +81,7 @@
       <div class="phase-content" id="p2-content">
 
         <!-- Full-bleed image layer -->
-        <div class="scene-image" id="scene-2"
-             style="background-image: url('phase2.png')">
+        <div class="scene-image" id="scene-2" style="background-image: url('phase2.png')">
         </div>
 
         <!-- Color grade -->
@@ -85,8 +90,8 @@
         <!-- Left panel text -->
         <div class="p2-panel" id="p2-panel">
           <span class="label-tag">FIELD ACTIVE</span>
-          <h2 class="phase-headline">Dynamic<br/>Forces</h2>
-          <p class="phase-body">Fluid arcs frozen mid-motion.<br/>Every force bends to velocity.</p>
+          <h2 class="phase-headline">Dynamic<br />Forces</h2>
+          <p class="phase-body">Fluid arcs frozen mid-motion.<br />Every force bends to velocity.</p>
         </div>
 
         <!-- Velocity readout strip -->
@@ -124,7 +129,9 @@
         <div class="foundation-vignette"></div>
 
         <!-- Top progress line -->
-        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s02-fill"></div></div>
+        <div class="slide-progress-bar">
+          <div class="slide-progress-fill" id="s02-fill"></div>
+        </div>
         <div class="slide-num">Slide 02</div>
 
         <div class="foundation-content" id="s02-content">
@@ -210,7 +217,9 @@
         <div class="foundation-bg"></div>
         <div class="foundation-vignette"></div>
 
-        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s03-fill"></div></div>
+        <div class="slide-progress-bar">
+          <div class="slide-progress-fill" id="s03-fill"></div>
+        </div>
         <div class="slide-num">Slide 03</div>
 
         <div class="foundation-content" id="s03-content">
@@ -218,7 +227,7 @@
           <!-- Week header -->
           <div class="week-header">
             <span class="week-eyebrow">Phase 01 · Foundation</span>
-            <h2 class="week-headline"><span class="hl">Week 1</span><br/>Task Breakdown</h2>
+            <h2 class="week-headline"><span class="hl">Week 1</span><br />Task Breakdown</h2>
             <div class="week-rule"></div>
           </div>
 
@@ -234,21 +243,24 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Init Flutter project</strong>Create mono-repo structure, configure pubspec.</span>
+                  <span class="task-main"><strong>Init Flutter project</strong>Create mono-repo structure, configure
+                    pubspec.</span>
                   <div class="pill-row"><span class="pill">Flutter 3</span><span class="pill">Dart</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Flavours &amp; envs</strong>Dev / staging / prod environment configs.</span>
+                  <span class="task-main"><strong>Flavours &amp; envs</strong>Dev / staging / prod environment
+                    configs.</span>
                   <div class="pill-row"><span class="pill">flutter_flavorizr</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Folder architecture</strong>Feature-first folder structure, barrel exports.</span>
+                  <span class="task-main"><strong>Folder architecture</strong>Feature-first folder structure, barrel
+                    exports.</span>
                 </div>
               </div>
             </div>
@@ -262,21 +274,24 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Scaffold backend</strong>FastAPI app, uvicorn, ASGI middleware stack.</span>
+                  <span class="task-main"><strong>Scaffold backend</strong>FastAPI app, uvicorn, ASGI middleware
+                    stack.</span>
                   <div class="pill-row"><span class="pill">FastAPI</span><span class="pill">Python 3.12</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Router structure</strong>Versioned /v1 routes, dependency injection.</span>
+                  <span class="task-main"><strong>Router structure</strong>Versioned /v1 routes, dependency
+                    injection.</span>
                   <div class="pill-row"><span class="pill">Pydantic v2</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Dockerise</strong>Multi-stage Dockerfile, docker-compose for local dev.</span>
+                  <span class="task-main"><strong>Dockerise</strong>Multi-stage Dockerfile, docker-compose for local
+                    dev.</span>
                   <div class="pill-row"><span class="pill">Docker</span></div>
                 </div>
               </div>
@@ -291,21 +306,24 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Firebase project</strong>Create project, enable Auth &amp; Firestore.</span>
+                  <span class="task-main"><strong>Firebase project</strong>Create project, enable Auth &amp;
+                    Firestore.</span>
                   <div class="pill-row"><span class="pill">Firebase</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>google-services.json</strong>Android &amp; iOS config files, SHA fingerprints.</span>
+                  <span class="task-main"><strong>google-services.json</strong>Android &amp; iOS config files, SHA
+                    fingerprints.</span>
                   <div class="pill-row"><span class="pill">FlutterFire</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Security rules</strong>Firestore &amp; Storage rules, role-based access.</span>
+                  <span class="task-main"><strong>Security rules</strong>Firestore &amp; Storage rules, role-based
+                    access.</span>
                 </div>
               </div>
             </div>
@@ -319,14 +337,16 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>ER diagram</strong>Model all entities, relationships &amp; cardinalities.</span>
+                  <span class="task-main"><strong>ER diagram</strong>Model all entities, relationships &amp;
+                    cardinalities.</span>
                   <div class="pill-row"><span class="pill">PostgreSQL</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Alembic migrations</strong>Initial migration, versioned schema history.</span>
+                  <span class="task-main"><strong>Alembic migrations</strong>Initial migration, versioned schema
+                    history.</span>
                   <div class="pill-row"><span class="pill">Alembic</span><span class="pill">SQLAlchemy</span></div>
                 </div>
               </div>
@@ -349,7 +369,9 @@
         <div class="foundation-bg"></div>
         <div class="foundation-vignette"></div>
 
-        <div class="slide-progress-bar"><div class="slide-progress-fill" id="s04-fill"></div></div>
+        <div class="slide-progress-bar">
+          <div class="slide-progress-fill" id="s04-fill"></div>
+        </div>
         <div class="slide-num">Slide 04</div>
 
         <div class="foundation-content" id="s04-content">
@@ -357,7 +379,7 @@
           <!-- Week header -->
           <div class="week-header">
             <span class="week-eyebrow">Phase 01 · Foundation</span>
-            <h2 class="week-headline"><span class="hl">Week 2 – 3</span><br/>Task Breakdown</h2>
+            <h2 class="week-headline"><span class="hl">Week 2 – 3</span><br />Task Breakdown</h2>
             <div class="week-rule"></div>
           </div>
 
@@ -373,20 +395,23 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Token service</strong>Issue, refresh &amp; revoke JWT tokens via FastAPI.</span>
+                  <span class="task-main"><strong>Token service</strong>Issue, refresh &amp; revoke JWT tokens via
+                    FastAPI.</span>
                   <div class="pill-row"><span class="pill">python-jose</span><span class="pill">passlib</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Firebase + JWT bridge</strong>Verify Firebase ID token, mint backend JWT.</span>
+                  <span class="task-main"><strong>Firebase + JWT bridge</strong>Verify Firebase ID token, mint backend
+                    JWT.</span>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Role guards</strong>RBAC middleware, protected route decorators.</span>
+                  <span class="task-main"><strong>Role guards</strong>RBAC middleware, protected route
+                    decorators.</span>
                 </div>
               </div>
             </div>
@@ -400,14 +425,16 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Token library</strong>Colors, spacing, radii &amp; type scale as Dart consts.</span>
+                  <span class="task-main"><strong>Token library</strong>Colors, spacing, radii &amp; type scale as Dart
+                    consts.</span>
                   <div class="pill-row"><span class="pill">ThemeData</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Component kit</strong>Button, Input, Card, AppBar, BottomNav atoms.</span>
+                  <span class="task-main"><strong>Component kit</strong>Button, Input, Card, AppBar, BottomNav
+                    atoms.</span>
                 </div>
               </div>
               <div class="task-row">
@@ -435,13 +462,15 @@
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Deep links</strong>Universal links (iOS) &amp; App Links (Android).</span>
+                  <span class="task-main"><strong>Deep links</strong>Universal links (iOS) &amp; App Links
+                    (Android).</span>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Auth redirect guards</strong>Redirect unauthenticated users, onboarding flow.</span>
+                  <span class="task-main"><strong>Auth redirect guards</strong>Redirect unauthenticated users,
+                    onboarding flow.</span>
                 </div>
               </div>
             </div>
@@ -455,21 +484,24 @@
               <div class="task-row">
                 <div class="task-dot active"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>GitHub Actions</strong>Lint → test → build matrix for Flutter &amp; Python.</span>
+                  <span class="task-main"><strong>GitHub Actions</strong>Lint → test → build matrix for Flutter &amp;
+                    Python.</span>
                   <div class="pill-row"><span class="pill">Actions</span><span class="pill">pytest</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Staging deploy</strong>Auto-deploy backend to Cloud Run on merge to dev.</span>
+                  <span class="task-main"><strong>Staging deploy</strong>Auto-deploy backend to Cloud Run on merge to
+                    dev.</span>
                   <div class="pill-row"><span class="pill">Cloud Run</span></div>
                 </div>
               </div>
               <div class="task-row">
                 <div class="task-dot"></div>
                 <div class="task-text">
-                  <span class="task-main"><strong>Test flight</strong>Fastlane for iOS beta builds, Firebase App Dist. for Android.</span>
+                  <span class="task-main"><strong>Test flight</strong>Fastlane for iOS beta builds, Firebase App Dist.
+                    for Android.</span>
                   <div class="pill-row"><span class="pill">Fastlane</span></div>
                 </div>
               </div>
@@ -494,7 +526,9 @@
         <div class="core-bg"></div>
         <div class="core-grid"></div>
         <div class="core-vignette"></div>
-        <div class="core-progress-bar"><div class="core-progress-fill" id="s05-fill"></div></div>
+        <div class="core-progress-bar">
+          <div class="core-progress-fill" id="s05-fill"></div>
+        </div>
         <div class="core-slide-num">Slide 05</div>
 
         <div class="core-content" id="s05-content">
@@ -527,7 +561,8 @@
               <span class="fc-seq">M·02</span>
               <span class="fc-icon">✨</span>
               <span class="fc-name">Astrology</span>
-              <p class="fc-blurb">Birth data input, Swiss Ephemeris engine, Kundli chart generation &amp; horoscope UI.</p>
+              <p class="fc-blurb">Birth data input, Swiss Ephemeris engine, Kundli chart generation &amp; horoscope UI.
+              </p>
             </article>
 
             <article class="feature-card fc-num" id="fc-03" aria-label="Numerology">
@@ -535,7 +570,8 @@
               <span class="fc-seq">M·03</span>
               <span class="fc-icon">🔢</span>
               <span class="fc-name">Numerology</span>
-              <p class="fc-blurb">Life Path, Expression &amp; Soul Urge numbers with detailed personality breakdowns.</p>
+              <p class="fc-blurb">Life Path, Expression &amp; Soul Urge numbers with detailed personality breakdowns.
+              </p>
             </article>
 
             <article class="feature-card fc-compat" id="fc-04" aria-label="Compatibility">
@@ -573,7 +609,9 @@
         <div class="core-bg"></div>
         <div class="core-grid"></div>
         <div class="core-vignette"></div>
-        <div class="core-progress-bar"><div class="core-progress-fill" id="s06-fill"></div></div>
+        <div class="core-progress-bar">
+          <div class="core-progress-fill" id="s06-fill"></div>
+        </div>
         <div class="core-slide-num">Slide 06</div>
 
         <div class="core-content mod-cyan" id="s06-content">
@@ -592,8 +630,10 @@
                 <div class="step-node active">01</div>
                 <div class="step-body">
                   <span class="step-title">Image Capture</span>
-                  <span class="step-desc">Camera permission flow, guided hand overlay, auto-crop &amp; quality gating.</span>
-                  <div class="step-pills"><span class="step-pill">camera_plus</span><span class="step-pill">image_picker</span></div>
+                  <span class="step-desc">Camera permission flow, guided hand overlay, auto-crop &amp; quality
+                    gating.</span>
+                  <div class="step-pills"><span class="step-pill">camera_plus</span><span
+                      class="step-pill">image_picker</span></div>
                 </div>
               </div>
 
@@ -602,7 +642,8 @@
                 <div class="step-body">
                   <span class="step-title">CV Pipeline</span>
                   <span class="step-desc">MediaPipe Hands landmark detection, palm segmentation, line extraction.</span>
-                  <div class="step-pills"><span class="step-pill">MediaPipe</span><span class="step-pill">OpenCV</span></div>
+                  <div class="step-pills"><span class="step-pill">MediaPipe</span><span class="step-pill">OpenCV</span>
+                  </div>
                 </div>
               </div>
 
@@ -610,8 +651,10 @@
                 <div class="step-node">03</div>
                 <div class="step-body">
                   <span class="step-title">AI Scoring Engine</span>
-                  <span class="step-desc">FastAPI endpoint runs TFLite model: life, head, heart &amp; fate line scoring.</span>
-                  <div class="step-pills"><span class="step-pill">TFLite</span><span class="step-pill">FastAPI</span></div>
+                  <span class="step-desc">FastAPI endpoint runs TFLite model: life, head, heart &amp; fate line
+                    scoring.</span>
+                  <div class="step-pills"><span class="step-pill">TFLite</span><span class="step-pill">FastAPI</span>
+                  </div>
                 </div>
               </div>
 
@@ -620,11 +663,12 @@
                 <div class="step-body">
                   <span class="step-title">Results UI</span>
                   <span class="step-desc">Animated reveal cards, annotated palm overlay, trait wheel chart.</span>
-                  <div class="step-pills"><span class="step-pill">fl_chart</span><span class="step-pill">CustomPaint</span></div>
+                  <div class="step-pills"><span class="step-pill">fl_chart</span><span
+                      class="step-pill">CustomPaint</span></div>
                 </div>
               </div>
 
-            </div><!-- /pipeline -->
+            </div><!-- /pipe-->
 
             <!-- Spec blocks -->
             <div class="mod-specs" id="s06-specs">
@@ -632,7 +676,8 @@
               <div class="spec-block">
                 <span class="spec-label">Model</span>
                 <span class="spec-title">Landmark + Classification</span>
-                <p class="spec-desc">21-point hand skeleton via MediaPipe, followed by a custom TFLite classifier trained on 12 k annotated palm images.</p>
+                <p class="spec-desc">21-point hand skeleton via MediaPipe, followed by a custom TFLite classifier
+                  trained on 12 k annotated palm images.</p>
                 <div class="spec-metrics">
                   <div class="spec-metric">
                     <span class="spec-metric-val">94%</span>
@@ -648,13 +693,15 @@
               <div class="spec-block">
                 <span class="spec-label">Lines Detected</span>
                 <span class="spec-title">Life · Head · Heart · Fate</span>
-                <p class="spec-desc">Each line scored 0–100 across depth, length &amp; curvature. Scores map to 48 trait archetypes.</p>
+                <p class="spec-desc">Each line scored 0–100 across depth, length &amp; curvature. Scores map to 48 trait
+                  archetypes.</p>
               </div>
 
               <div class="spec-block">
                 <span class="spec-label">Output</span>
                 <span class="spec-title">Reading + PDF export</span>
-                <p class="spec-desc">Personalised reading with shareable card &amp; full PDF report. Saved to user history in Firestore.</p>
+                <p class="spec-desc">Personalised reading with shareable card &amp; full PDF report. Saved to user
+                  history in Firestore.</p>
               </div>
 
             </div><!-- /specs -->
@@ -669,7 +716,9 @@
         <div class="core-bg"></div>
         <div class="core-grid"></div>
         <div class="core-vignette"></div>
-        <div class="core-progress-bar"><div class="core-progress-fill" id="s07-fill"></div></div>
+        <div class="core-progress-bar">
+          <div class="core-progress-fill" id="s07-fill"></div>
+        </div>
         <div class="core-slide-num">Slide 07</div>
 
         <div class="core-content mod-amber" id="s07-content">
@@ -687,8 +736,10 @@
                 <div class="step-node active">01</div>
                 <div class="step-body">
                   <span class="step-title">Birth Data Input</span>
-                  <span class="step-desc">Date, time &amp; place of birth with timezone auto-detection and place search.</span>
-                  <div class="step-pills"><span class="step-pill">geolocator</span><span class="step-pill">timezone_finder</span></div>
+                  <span class="step-desc">Date, time &amp; place of birth with timezone auto-detection and place
+                    search.</span>
+                  <div class="step-pills"><span class="step-pill">geolocator</span><span
+                      class="step-pill">timezone_finder</span></div>
                 </div>
               </div>
 
@@ -696,8 +747,10 @@
                 <div class="step-node active">02</div>
                 <div class="step-body">
                   <span class="step-title">Ephemeris Engine</span>
-                  <span class="step-desc">Swiss Ephemeris via Python binding computes planetary positions, houses &amp; aspects.</span>
-                  <div class="step-pills"><span class="step-pill">pyswisseph</span><span class="step-pill">FastAPI</span></div>
+                  <span class="step-desc">Swiss Ephemeris via Python binding computes planetary positions, houses &amp;
+                    aspects.</span>
+                  <div class="step-pills"><span class="step-pill">pyswisseph</span><span
+                      class="step-pill">FastAPI</span></div>
                 </div>
               </div>
 
@@ -705,8 +758,10 @@
                 <div class="step-node">03</div>
                 <div class="step-body">
                   <span class="step-title">Kundli Chart Generation</span>
-                  <span class="step-desc">North/South Indian chart rendering, D1–D9 divisional charts, lagna &amp; rasi.</span>
-                  <div class="step-pills"><span class="step-pill">CustomPainter</span><span class="step-pill">SVG</span></div>
+                  <span class="step-desc">North/South Indian chart rendering, D1–D9 divisional charts, lagna &amp;
+                    rasi.</span>
+                  <div class="step-pills"><span class="step-pill">CustomPainter</span><span class="step-pill">SVG</span>
+                  </div>
                 </div>
               </div>
 
@@ -714,8 +769,10 @@
                 <div class="step-node">04</div>
                 <div class="step-body">
                   <span class="step-title">Horoscope Generation</span>
-                  <span class="step-desc">LLM-augmented interpretations: daily, weekly, monthly &amp; yearly forecasts.</span>
-                  <div class="step-pills"><span class="step-pill">Gemini API</span><span class="step-pill">RAG</span></div>
+                  <span class="step-desc">LLM-augmented interpretations: daily, weekly, monthly &amp; yearly
+                    forecasts.</span>
+                  <div class="step-pills"><span class="step-pill">Gemini API</span><span class="step-pill">RAG</span>
+                  </div>
                 </div>
               </div>
 
@@ -723,8 +780,10 @@
                 <div class="step-node">05</div>
                 <div class="step-body">
                   <span class="step-title">Horoscope UI</span>
-                  <span class="step-desc">Interactive chart viewer, planet cards, transit timeline, dasha periods.</span>
-                  <div class="step-pills"><span class="step-pill">fl_chart</span><span class="step-pill">AnimatedList</span></div>
+                  <span class="step-desc">Interactive chart viewer, planet cards, transit timeline, dasha
+                    periods.</span>
+                  <div class="step-pills"><span class="step-pill">fl_chart</span><span
+                      class="step-pill">AnimatedList</span></div>
                 </div>
               </div>
 
@@ -736,7 +795,8 @@
               <div class="spec-block">
                 <span class="spec-label">Calculation Engine</span>
                 <span class="spec-title">Swiss Ephemeris (SE 2.10)</span>
-                <p class="spec-desc">Sub-arcsecond precision planetary data for −8000 to +16800 CE. Covers all Grahas, Upagrahas, Nakshatras &amp; house systems.</p>
+                <p class="spec-desc">Sub-arcsecond precision planetary data for −8000 to +16800 CE. Covers all Grahas,
+                  Upagrahas, Nakshatras &amp; house systems.</p>
                 <div class="spec-metrics">
                   <div class="spec-metric">
                     <span class="spec-metric-val">9</span>
@@ -756,13 +816,15 @@
               <div class="spec-block">
                 <span class="spec-label">Chart Systems</span>
                 <span class="spec-title">Lagna · Navamsa · Moon</span>
-                <p class="spec-desc">Rasi, D9 Navamsa, D3 Drekkana &amp; custom divisional charts rendered as interactive SVG with zoom.</p>
+                <p class="spec-desc">Rasi, D9 Navamsa, D3 Drekkana &amp; custom divisional charts rendered as
+                  interactive SVG with zoom.</p>
               </div>
 
               <div class="spec-block">
                 <span class="spec-label">AI Interpretations</span>
                 <span class="spec-title">Gemini 1.5 + RAG corpus</span>
-                <p class="spec-desc">300k-token Jyotish corpus with Parashari &amp; Krishnamurty paddhati rules. Streamed narrative generation.</p>
+                <p class="spec-desc">300k-token Jyotish corpus with Parashari &amp; Krishnamurty paddhati rules.
+                  Streamed narrative generation.</p>
               </div>
 
             </div><!-- /specs -->
@@ -777,13 +839,15 @@
         <div class="core-bg"></div>
         <div class="core-grid"></div>
         <div class="core-vignette"></div>
-        <div class="core-progress-bar"><div class="core-progress-fill" id="s08-fill"></div></div>
+        <div class="core-progress-bar">
+          <div class="core-progress-fill" id="s08-fill"></div>
+        </div>
         <div class="core-slide-num">Slide 08</div>
 
         <div class="core-content" id="s08-content">
           <div class="core-week-header">
             <span class="core-week-eyebrow">Phase 02 · Modules 03–05</span>
-            <h2 class="core-week-headline"><span class="hl-in">Numerology</span>, Compatibility<br/>&amp; Reports</h2>
+            <h2 class="core-week-headline"><span class="hl-in">Numerology</span>, Compatibility<br />&amp; Reports</h2>
             <div class="core-week-rule"></div>
           </div>
 
@@ -798,23 +862,28 @@
               <div class="trio-col-accent"></div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Name + DOB parser</strong>Pythagorean &amp; Chaldean reduction logic.<span class="trio-note">python · regex</span></div>
+                <div class="trio-text"><strong>Name + DOB parser</strong>Pythagorean &amp; Chaldean reduction
+                  logic.<span class="trio-note">python · regex</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Core numbers</strong>Life Path, Expression, Soul Urge, Personality, Birthday.<span class="trio-note">3 systems</span></div>
+                <div class="trio-text"><strong>Core numbers</strong>Life Path, Expression, Soul Urge, Personality,
+                  Birthday.<span class="trio-note">3 systems</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Personal year &amp; cycles</strong>Annual, monthly &amp; daily personal year arcs.<span class="trio-note">timeline UI</span></div>
+                <div class="trio-text"><strong>Personal year &amp; cycles</strong>Annual, monthly &amp; daily personal
+                  year arcs.<span class="trio-note">timeline UI</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Trait narratives</strong>AI-generated paragraphs per number archetype.<span class="trio-note">Gemini API</span></div>
+                <div class="trio-text"><strong>Trait narratives</strong>AI-generated paragraphs per number
+                  archetype.<span class="trio-note">Gemini API</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Animated number wheel</strong>Custom Canvas widget, number glow on reveal.</div>
+                <div class="trio-text"><strong>Animated number wheel</strong>Custom Canvas widget, number glow on
+                  reveal.</div>
               </div>
             </div>
 
@@ -827,23 +896,28 @@
               <div class="trio-col-accent"></div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Profile pairing</strong>Link two user profiles or enter partner details.<span class="trio-note">Firestore refs</span></div>
+                <div class="trio-text"><strong>Profile pairing</strong>Link two user profiles or enter partner
+                  details.<span class="trio-note">Firestore refs</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Cross-module scoring</strong>Weighted score from palm, astro &amp; numerology signals.<span class="trio-note">0–100 scale</span></div>
+                <div class="trio-text"><strong>Cross-module scoring</strong>Weighted score from palm, astro &amp;
+                  numerology signals.<span class="trio-note">0–100 scale</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Dimension breakdown</strong>Love, career, communication, trust &amp; growth axes.</div>
+                <div class="trio-text"><strong>Dimension breakdown</strong>Love, career, communication, trust &amp;
+                  growth axes.</div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Side-by-side charts</strong>Dual Kundli overlay, synastry aspects table.<span class="trio-note">CustomPainter</span></div>
+                <div class="trio-text"><strong>Side-by-side charts</strong>Dual Kundli overlay, synastry aspects
+                  table.<span class="trio-note">CustomPainter</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Shareable card</strong>Instagram-ready score card with gradient branding.</div>
+                <div class="trio-text"><strong>Shareable card</strong>Instagram-ready score card with gradient branding.
+                </div>
               </div>
             </div>
 
@@ -856,23 +930,28 @@
               <div class="trio-col-accent"></div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Template engine</strong>ReportLab / WeasyPrint server-side PDF with brand tokens.<span class="trio-note">FastAPI</span></div>
+                <div class="trio-text"><strong>Template engine</strong>ReportLab / WeasyPrint server-side PDF with brand
+                  tokens.<span class="trio-note">FastAPI</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot on"></div>
-                <div class="trio-text"><strong>Sections</strong>Palm scan, Kundli chart, numerology table, compatibility matrix.<span class="trio-note">30+ pages</span></div>
+                <div class="trio-text"><strong>Sections</strong>Palm scan, Kundli chart, numerology table, compatibility
+                  matrix.<span class="trio-note">30+ pages</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Chart embedding</strong>SVG Kundli, palm annotated image, score ring charts.</div>
+                <div class="trio-text"><strong>Chart embedding</strong>SVG Kundli, palm annotated image, score ring
+                  charts.</div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Delivery</strong>Signed GCS URL, in-app viewer &amp; native share sheet.<span class="trio-note">Cloud Storage</span></div>
+                <div class="trio-text"><strong>Delivery</strong>Signed GCS URL, in-app viewer &amp; native share
+                  sheet.<span class="trio-note">Cloud Storage</span></div>
               </div>
               <div class="trio-step">
                 <div class="trio-dot"></div>
-                <div class="trio-text"><strong>Premium gate</strong>Freemium: 1 free PDF/month, subscription unlocks unlimited.<span class="trio-note">RevenueCat</span></div>
+                <div class="trio-text"><strong>Premium gate</strong>Freemium: 1 free PDF/month, subscription unlocks
+                  unlimited.<span class="trio-note">RevenueCat</span></div>
               </div>
             </div>
 
@@ -894,7 +973,9 @@
         <div class="ai-bg"></div>
         <div class="ai-grid"></div>
         <div class="ai-vignette"></div>
-        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s09-fill"></div></div>
+        <div class="ai-progress-bar">
+          <div class="ai-progress-fill" id="s09-fill"></div>
+        </div>
         <div class="ai-slide-num">Slide 09</div>
 
         <div class="ai-content" id="s09-content">
@@ -927,7 +1008,8 @@
               <span class="ai-card-seq">S·02</span>
               <span class="ai-card-icon">🎙️</span>
               <span class="ai-card-name">Voice I/O</span>
-              <p class="ai-card-blurb">STT input &amp; TTS output pipeline with streaming audio and language detection.</p>
+              <p class="ai-card-blurb">STT input &amp; TTS output pipeline with streaming audio and language detection.
+              </p>
             </article>
 
             <article class="ai-card ac-persona" id="ai-c03" aria-label="Personalization">
@@ -943,7 +1025,8 @@
               <span class="ai-card-seq">S·04</span>
               <span class="ai-card-icon">🔔</span>
               <span class="ai-card-name">Push Alerts</span>
-              <p class="ai-card-blurb">Smart notification engine — daily horoscope, transits, lucky day &amp; reminders.</p>
+              <p class="ai-card-blurb">Smart notification engine — daily horoscope, transits, lucky day &amp; reminders.
+              </p>
             </article>
 
             <article class="ai-card ac-lang" id="ai-c05" aria-label="Multi-language">
@@ -973,7 +1056,9 @@
         <div class="ai-bg"></div>
         <div class="ai-grid"></div>
         <div class="ai-vignette"></div>
-        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s10-fill"></div></div>
+        <div class="ai-progress-bar">
+          <div class="ai-progress-fill" id="s10-fill"></div>
+        </div>
         <div class="ai-slide-num">Slide 10</div>
 
         <div class="ai-content" id="s10-content">
@@ -997,8 +1082,10 @@
                 <div class="ai-step-node on">01</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Session management</span>
-                  <span class="ai-step-desc">Multi-turn conversation context with Firestore-backed session history &amp; expiry.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">Firestore</span><span class="ai-step-pill">UUID</span></div>
+                  <span class="ai-step-desc">Multi-turn conversation context with Firestore-backed session history &amp;
+                    expiry.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Firestore</span><span
+                      class="ai-step-pill">UUID</span></div>
                 </div>
               </div>
 
@@ -1006,8 +1093,10 @@
                 <div class="ai-step-node on">02</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Prompt engineering</span>
-                  <span class="ai-step-desc">System-prompt layer injects user's palm, astro &amp; numerology context per query.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini 1.5 Pro</span><span class="ai-step-pill">RAG</span></div>
+                  <span class="ai-step-desc">System-prompt layer injects user's palm, astro &amp; numerology context per
+                    query.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini 1.5 Pro</span><span
+                      class="ai-step-pill">RAG</span></div>
                 </div>
               </div>
 
@@ -1015,8 +1104,10 @@
                 <div class="ai-step-node">03</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Streaming response</span>
-                  <span class="ai-step-desc">Server-sent events stream tokens to Flutter via WebSocket — typewriter effect UI.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">SSE</span><span class="ai-step-pill">WebSocket</span></div>
+                  <span class="ai-step-desc">Server-sent events stream tokens to Flutter via WebSocket — typewriter
+                    effect UI.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">SSE</span><span
+                      class="ai-step-pill">WebSocket</span></div>
                 </div>
               </div>
 
@@ -1024,8 +1115,10 @@
                 <div class="ai-step-node">04</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Action cards</span>
-                  <span class="ai-step-desc">Structured JSON responses render as interactive reading, chart or report cards inline.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">function_call</span><span class="ai-step-pill">Flutter</span></div>
+                  <span class="ai-step-desc">Structured JSON responses render as interactive reading, chart or report
+                    cards inline.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">function_call</span><span
+                      class="ai-step-pill">Flutter</span></div>
                 </div>
               </div>
 
@@ -1033,8 +1126,10 @@
                 <div class="ai-step-node">05</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Safety &amp; moderation</span>
-                  <span class="ai-step-desc">Content filtering, rate limiting per tier &amp; jailbreak guard via safety settings API.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini Safety</span><span class="ai-step-pill">Redis</span></div>
+                  <span class="ai-step-desc">Content filtering, rate limiting per tier &amp; jailbreak guard via safety
+                    settings API.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Gemini Safety</span><span
+                      class="ai-step-pill">Redis</span></div>
                 </div>
               </div>
 
@@ -1052,8 +1147,10 @@
                 <div class="ai-step-node on">01</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">STT — Speech to Text</span>
-                  <span class="ai-step-desc">On-device Whisper.cpp (offline) + Google Speech-to-Text for Hindi &amp; regional langs.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">Whisper.cpp</span><span class="ai-step-pill">Speech API</span></div>
+                  <span class="ai-step-desc">On-device Whisper.cpp (offline) + Google Speech-to-Text for Hindi &amp;
+                    regional langs.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Whisper.cpp</span><span
+                      class="ai-step-pill">Speech API</span></div>
                 </div>
               </div>
 
@@ -1061,8 +1158,10 @@
                 <div class="ai-step-node on">02</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Language detection</span>
-                  <span class="ai-step-desc">Auto-detect spoken language from audio fingerprint; route to correct i18n prompt.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">langdetect</span><span class="ai-step-pill">FastAPI</span></div>
+                  <span class="ai-step-desc">Auto-detect spoken language from audio fingerprint; route to correct i18n
+                    prompt.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">langdetect</span><span
+                      class="ai-step-pill">FastAPI</span></div>
                 </div>
               </div>
 
@@ -1070,7 +1169,8 @@
                 <div class="ai-step-node">03</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">AI processing</span>
-                  <span class="ai-step-desc">Transcribed text fed to the same Gemini chat engine; response generated with voice flag.</span>
+                  <span class="ai-step-desc">Transcribed text fed to the same Gemini chat engine; response generated
+                    with voice flag.</span>
                   <div class="ai-step-pills"><span class="ai-step-pill">Gemini 1.5 Pro</span></div>
                 </div>
               </div>
@@ -1079,8 +1179,10 @@
                 <div class="ai-step-node">04</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">TTS — Text to Speech</span>
-                  <span class="ai-step-desc">Google Cloud TTS with Neural2 voices — female Hindi &amp; English, streamed MP3 chunks.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">Cloud TTS</span><span class="ai-step-pill">Neural2</span></div>
+                  <span class="ai-step-desc">Google Cloud TTS with Neural2 voices — female Hindi &amp; English, streamed
+                    MP3 chunks.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">Cloud TTS</span><span
+                      class="ai-step-pill">Neural2</span></div>
                 </div>
               </div>
 
@@ -1088,8 +1190,10 @@
                 <div class="ai-step-node">05</div>
                 <div class="ai-step-body">
                   <span class="ai-step-title">Waveform UI</span>
-                  <span class="ai-step-desc">Animated audio waveform visualiser synced to TTS playback with pause/replay controls.</span>
-                  <div class="ai-step-pills"><span class="ai-step-pill">CustomPainter</span><span class="ai-step-pill">AudioPlayers</span></div>
+                  <span class="ai-step-desc">Animated audio waveform visualiser synced to TTS playback with pause/replay
+                    controls.</span>
+                  <div class="ai-step-pills"><span class="ai-step-pill">CustomPainter</span><span
+                      class="ai-step-pill">AudioPlayers</span></div>
                 </div>
               </div>
 
@@ -1105,7 +1209,9 @@
         <div class="ai-bg"></div>
         <div class="ai-grid"></div>
         <div class="ai-vignette"></div>
-        <div class="ai-progress-bar"><div class="ai-progress-fill" id="s11-fill"></div></div>
+        <div class="ai-progress-bar">
+          <div class="ai-progress-fill" id="s11-fill"></div>
+        </div>
         <div class="ai-slide-num">Slide 11</div>
 
         <div class="ai-content" id="s11-content">
@@ -1127,23 +1233,28 @@
 
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>FCM integration</strong>Firebase Cloud Messaging with topic &amp; token-based targeting.<span class="split-note">flutter_local_notifications</span></div>
+                <div class="split-text"><strong>FCM integration</strong>Firebase Cloud Messaging with topic &amp;
+                  token-based targeting.<span class="split-note">flutter_local_notifications</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>Scheduled horoscope push</strong>Daily planetary brief at user-preferred time via Cloud Scheduler.<span class="split-note">Cloud Scheduler · Pub/Sub</span></div>
+                <div class="split-text"><strong>Scheduled horoscope push</strong>Daily planetary brief at user-preferred
+                  time via Cloud Scheduler.<span class="split-note">Cloud Scheduler · Pub/Sub</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>Transit alerts</strong>Auto-notify when Mercury retrograde, eclipse season or key Dasha periods begin.<span class="split-note">pyswisseph</span></div>
+                <div class="split-text"><strong>Transit alerts</strong>Auto-notify when Mercury retrograde, eclipse
+                  season or key Dasha periods begin.<span class="split-note">pyswisseph</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot"></div>
-                <div class="split-text"><strong>Smart send-time optimisation</strong>ML model learns per-user open-rate patterns, adjusts delivery window.<span class="split-note">BigQuery ML</span></div>
+                <div class="split-text"><strong>Smart send-time optimisation</strong>ML model learns per-user open-rate
+                  patterns, adjusts delivery window.<span class="split-note">BigQuery ML</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot"></div>
-                <div class="split-text"><strong>In-app inbox</strong>Persistent notification centre with read/unread state &amp; deep-link routing.<span class="split-note">Firestore</span></div>
+                <div class="split-text"><strong>In-app inbox</strong>Persistent notification centre with read/unread
+                  state &amp; deep-link routing.<span class="split-note">Firestore</span></div>
               </div>
 
               <div class="split-metrics">
@@ -1172,23 +1283,30 @@
 
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>Cold start reduction</strong>Lazy-loaded routes, deferred imports &amp; Dart AOT compilation targets &lt;1.2s launch.<span class="split-note">flutter_native_splash</span></div>
+                <div class="split-text"><strong>Cold start reduction</strong>Lazy-loaded routes, deferred imports &amp;
+                  Dart AOT compilation targets &lt;1.2s launch.<span class="split-note">flutter_native_splash</span>
+                </div>
               </div>
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>API response caching</strong>Redis TTL cache for ephemeris &amp; horoscope endpoints — 95% cache hit rate target.<span class="split-note">Redis · Cloud Run</span></div>
+                <div class="split-text"><strong>API response caching</strong>Redis TTL cache for ephemeris &amp;
+                  horoscope endpoints — 95% cache hit rate target.<span class="split-note">Redis · Cloud Run</span>
+                </div>
               </div>
               <div class="split-row">
                 <div class="split-dot on"></div>
-                <div class="split-text"><strong>Image pipeline</strong>WebP conversion, CDN delivery &amp; progressive loading for palm scan images.<span class="split-note">Cloud CDN · ImageKit</span></div>
+                <div class="split-text"><strong>Image pipeline</strong>WebP conversion, CDN delivery &amp; progressive
+                  loading for palm scan images.<span class="split-note">Cloud CDN · ImageKit</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot"></div>
-                <div class="split-text"><strong>Frame-rate profiling</strong>Flutter DevTools integration — target 60 fps jank-free scroll &amp; animation.<span class="split-note">DevTools · Perfetto</span></div>
+                <div class="split-text"><strong>Frame-rate profiling</strong>Flutter DevTools integration — target 60
+                  fps jank-free scroll &amp; animation.<span class="split-note">DevTools · Perfetto</span></div>
               </div>
               <div class="split-row">
                 <div class="split-dot"></div>
-                <div class="split-text"><strong>Bundle size audit</strong>Tree-shaking, font subsetting, SVG asset optimisation — target &lt;25 MB APK.<span class="split-note">dart2js · proguard</span></div>
+                <div class="split-text"><strong>Bundle size audit</strong>Tree-shaking, font subsetting, SVG asset
+                  optimisation — target &lt;25 MB APK.<span class="split-note">dart2js · proguard</span></div>
               </div>
 
               <div class="split-metrics">
@@ -1225,7 +1343,9 @@
         <div class="mo-bg"></div>
         <div class="mo-grid"></div>
         <div class="mo-vignette"></div>
-        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s12-fill"></div></div>
+        <div class="mo-progress-bar">
+          <div class="mo-progress-fill" id="s12-fill"></div>
+        </div>
         <div class="mo-slide-num">Slide 12</div>
 
         <div class="mo-content" id="s12-content">
@@ -1250,7 +1370,8 @@
               <span class="mo-pillar-seq">P·01</span>
               <span class="mo-pillar-icon">💳</span>
               <span class="mo-pillar-name">Razorpay SDK</span>
-              <p class="mo-pillar-blurb">UPI, card, wallet &amp; EMI payments with webhook-driven order lifecycle &amp; refunds.</p>
+              <p class="mo-pillar-blurb">UPI, card, wallet &amp; EMI payments with webhook-driven order lifecycle &amp;
+                refunds.</p>
               <div class="mo-pillar-pills">
                 <span class="mo-pill">Razorpay</span>
                 <span class="mo-pill">FastAPI</span>
@@ -1263,7 +1384,8 @@
               <span class="mo-pillar-seq">P·02</span>
               <span class="mo-pillar-icon">🔒</span>
               <span class="mo-pillar-name">Premium Gates</span>
-              <p class="mo-pillar-blurb">Feature-level access control — free tier, Pro &amp; Premium with graceful upgrade prompts.</p>
+              <p class="mo-pillar-blurb">Feature-level access control — free tier, Pro &amp; Premium with graceful
+                upgrade prompts.</p>
               <div class="mo-pillar-pills">
                 <span class="mo-pill">RevenueCat</span>
                 <span class="mo-pill">Firestore</span>
@@ -1275,7 +1397,8 @@
               <span class="mo-pillar-seq">P·03</span>
               <span class="mo-pillar-icon">⬆️</span>
               <span class="mo-pillar-name">Yearly Upsell</span>
-              <p class="mo-pillar-blurb">Annual plan nudge at key moments — post-reading, 30-day anniversary, lucky-day trigger.</p>
+              <p class="mo-pillar-blurb">Annual plan nudge at key moments — post-reading, 30-day anniversary, lucky-day
+                trigger.</p>
               <div class="mo-pillar-pills">
                 <span class="mo-pill">RevenueCat</span>
                 <span class="mo-pill">Amplitude</span>
@@ -1287,7 +1410,8 @@
               <span class="mo-pillar-seq">P·04</span>
               <span class="mo-pillar-icon">📈</span>
               <span class="mo-pillar-name">Revenue Dashboard</span>
-              <p class="mo-pillar-blurb">Admin panel: MRR, ARR, churn rate, cohort LTV, plan breakdown &amp; GST reports.</p>
+              <p class="mo-pillar-blurb">Admin panel: MRR, ARR, churn rate, cohort LTV, plan breakdown &amp; GST
+                reports.</p>
               <div class="mo-pillar-pills">
                 <span class="mo-pill">BigQuery</span>
                 <span class="mo-pill">Looker Studio</span>
@@ -1305,7 +1429,9 @@
         <div class="mo-bg"></div>
         <div class="mo-grid"></div>
         <div class="mo-vignette"></div>
-        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s13-fill"></div></div>
+        <div class="mo-progress-bar">
+          <div class="mo-progress-fill" id="s13-fill"></div>
+        </div>
         <div class="mo-slide-num">Slide 13</div>
 
         <div class="mo-content" id="s13-content">
@@ -1323,8 +1449,10 @@
                 <div class="mo-step-node on">01</div>
                 <div class="mo-step-body">
                   <span class="mo-step-title">Order creation</span>
-                  <span class="mo-step-desc">FastAPI creates a Razorpay order, stores draft in Firestore with idempotency key.</span>
-                  <div class="mo-step-pills"><span class="mo-step-pill">Razorpay API</span><span class="mo-step-pill">Firestore</span></div>
+                  <span class="mo-step-desc">FastAPI creates a Razorpay order, stores draft in Firestore with
+                    idempotency key.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">Razorpay API</span><span
+                      class="mo-step-pill">Firestore</span></div>
                 </div>
               </div>
 
@@ -1332,8 +1460,10 @@
                 <div class="mo-step-node on">02</div>
                 <div class="mo-step-body">
                   <span class="mo-step-title">Flutter checkout</span>
-                  <span class="mo-step-desc">Razorpay Flutter SDK surfaces native UPI, card &amp; wallet sheet with pre-filled data.</span>
-                  <div class="mo-step-pills"><span class="mo-step-pill">razorpay_flutter</span><span class="mo-step-pill">UPI</span></div>
+                  <span class="mo-step-desc">Razorpay Flutter SDK surfaces native UPI, card &amp; wallet sheet with
+                    pre-filled data.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">razorpay_flutter</span><span
+                      class="mo-step-pill">UPI</span></div>
                 </div>
               </div>
 
@@ -1341,8 +1471,10 @@
                 <div class="mo-step-node">03</div>
                 <div class="mo-step-body">
                   <span class="mo-step-title">Webhook verification</span>
-                  <span class="mo-step-desc">HMAC-SHA256 signature validation on server; idempotent payment.captured handler.</span>
-                  <div class="mo-step-pills"><span class="mo-step-pill">HMAC-SHA256</span><span class="mo-step-pill">Pub/Sub</span></div>
+                  <span class="mo-step-desc">HMAC-SHA256 signature validation on server; idempotent payment.captured
+                    handler.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">HMAC-SHA256</span><span
+                      class="mo-step-pill">Pub/Sub</span></div>
                 </div>
               </div>
 
@@ -1350,8 +1482,10 @@
                 <div class="mo-step-node">04</div>
                 <div class="mo-step-body">
                   <span class="mo-step-title">Entitlement grant</span>
-                  <span class="mo-step-desc">RevenueCat syncs Razorpay purchase; Firestore user doc updated with plan &amp; expiry.</span>
-                  <div class="mo-step-pills"><span class="mo-step-pill">RevenueCat</span><span class="mo-step-pill">Cloud Functions</span></div>
+                  <span class="mo-step-desc">RevenueCat syncs Razorpay purchase; Firestore user doc updated with plan
+                    &amp; expiry.</span>
+                  <div class="mo-step-pills"><span class="mo-step-pill">RevenueCat</span><span
+                      class="mo-step-pill">Cloud Functions</span></div>
                 </div>
               </div>
 
@@ -1359,7 +1493,8 @@
                 <div class="mo-step-node">05</div>
                 <div class="mo-step-body">
                   <span class="mo-step-title">Refund &amp; dispute flow</span>
-                  <span class="mo-step-desc">Admin-initiated refund via dashboard; Razorpay refund API + entitlement revocation.</span>
+                  <span class="mo-step-desc">Admin-initiated refund via dashboard; Razorpay refund API + entitlement
+                    revocation.</span>
                   <div class="mo-step-pills"><span class="mo-step-pill">Razorpay Refunds</span></div>
                 </div>
               </div>
@@ -1372,24 +1507,31 @@
               <div class="mo-spec-block">
                 <span class="mo-spec-label">Plan tiers</span>
                 <span class="mo-spec-title">Free · Pro · Premium</span>
-                <p class="mo-spec-desc">Free: 3 palm scans, 1 Kundli/month, limited chat. Pro: unlimited readings, PDF exports. Premium: all features + voice oracle + priority support.</p>
+                <p class="mo-spec-desc">Free: 3 palm scans, 1 Kundli/month, limited chat. Pro: unlimited readings, PDF
+                  exports. Premium: all features + voice oracle + priority support.</p>
                 <div class="mo-spec-metrics">
-                  <div class="mo-metric"><span class="mo-metric-val">₹0</span><span class="mo-metric-key">Free</span></div>
-                  <div class="mo-metric"><span class="mo-metric-val">₹199</span><span class="mo-metric-key">Pro/mo</span></div>
-                  <div class="mo-metric"><span class="mo-metric-val">₹499</span><span class="mo-metric-key">Premium/mo</span></div>
+                  <div class="mo-metric"><span class="mo-metric-val">₹0</span><span class="mo-metric-key">Free</span>
+                  </div>
+                  <div class="mo-metric"><span class="mo-metric-val">₹199</span><span
+                      class="mo-metric-key">Pro/mo</span></div>
+                  <div class="mo-metric"><span class="mo-metric-val">₹499</span><span
+                      class="mo-metric-key">Premium/mo</span></div>
                 </div>
               </div>
 
               <div class="mo-spec-block">
                 <span class="mo-spec-label">Gate implementation</span>
                 <span class="mo-spec-title">Feature flags + entitlement check</span>
-                <p class="mo-spec-desc">Every gated feature reads <code style="font-size:0.72em;color:var(--am-gold)">user.entitlement</code> from Firestore. Upgrade bottom-sheet fires on first gate hit with contextual upsell copy.</p>
+                <p class="mo-spec-desc">Every gated feature reads <code
+                    style="font-size:0.72em;color:var(--am-gold)">user.entitlement</code> from Firestore. Upgrade
+                  bottom-sheet fires on first gate hit with contextual upsell copy.</p>
               </div>
 
               <div class="mo-spec-block">
                 <span class="mo-spec-label">Yearly upsell</span>
                 <span class="mo-spec-title">Save 40% — ₹1,999/yr trigger</span>
-                <p class="mo-spec-desc">Shown on Day 30, post-premium reading, and on birthday. A/B tested copy via Remote Config. Amplitude events track funnel conversion.</p>
+                <p class="mo-spec-desc">Shown on Day 30, post-premium reading, and on birthday. A/B tested copy via
+                  Remote Config. Amplitude events track funnel conversion.</p>
               </div>
 
             </div><!-- /specs -->
@@ -1404,7 +1546,9 @@
         <div class="mo-bg"></div>
         <div class="mo-grid"></div>
         <div class="mo-vignette"></div>
-        <div class="mo-progress-bar"><div class="mo-progress-fill" id="s14-fill"></div></div>
+        <div class="mo-progress-bar">
+          <div class="mo-progress-fill" id="s14-fill"></div>
+        </div>
         <div class="mo-slide-num">Slide 14</div>
 
         <div class="mo-content" id="s14-content">
@@ -1425,23 +1569,28 @@
               <div class="mo-qcol-accent"></div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>MRR &amp; ARR tracking</strong>Daily BigQuery job aggregates Razorpay events into revenue time-series.<span class="mo-qnote">BigQuery · Looker</span></div>
+                <div class="mo-qtext"><strong>MRR &amp; ARR tracking</strong>Daily BigQuery job aggregates Razorpay
+                  events into revenue time-series.<span class="mo-qnote">BigQuery · Looker</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Cohort LTV</strong>Subscription cohort analysis — D7, D30, D90 retention &amp; lifetime value.<span class="mo-qnote">BigQuery ML</span></div>
+                <div class="mo-qtext"><strong>Cohort LTV</strong>Subscription cohort analysis — D7, D30, D90 retention
+                  &amp; lifetime value.<span class="mo-qnote">BigQuery ML</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Plan conversion funnel</strong>Amplitude tracks: free → trial → Pro → Premium conversion rates per channel.<span class="mo-qnote">Amplitude</span></div>
+                <div class="mo-qtext"><strong>Plan conversion funnel</strong>Amplitude tracks: free → trial → Pro →
+                  Premium conversion rates per channel.<span class="mo-qnote">Amplitude</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Admin dashboard</strong>Looker Studio report embedded in internal ops portal with date range filters.<span class="mo-qnote">Looker Studio</span></div>
+                <div class="mo-qtext"><strong>Admin dashboard</strong>Looker Studio report embedded in internal ops
+                  portal with date range filters.<span class="mo-qnote">Looker Studio</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Alerts</strong>Slack webhook fires on MRR dip &gt;5% or spike ≥ 2× baseline.<span class="mo-qnote">Pub/Sub · Slack</span></div>
+                <div class="mo-qtext"><strong>Alerts</strong>Slack webhook fires on MRR dip &gt;5% or spike ≥ 2×
+                  baseline.<span class="mo-qnote">Pub/Sub · Slack</span></div>
               </div>
             </div>
 
@@ -1454,23 +1603,28 @@
               <div class="mo-qcol-accent"></div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Auto-invoice generation</strong>PDF invoice created on payment.captured — 18% GST applied on digital services.<span class="mo-qnote">WeasyPrint · GCS</span></div>
+                <div class="mo-qtext"><strong>Auto-invoice generation</strong>PDF invoice created on payment.captured —
+                  18% GST applied on digital services.<span class="mo-qnote">WeasyPrint · GCS</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>GSTIN collection</strong>Optional B2B GSTIN field at checkout; stored &amp; printed on tax invoice.<span class="mo-qnote">Firestore</span></div>
+                <div class="mo-qtext"><strong>GSTIN collection</strong>Optional B2B GSTIN field at checkout; stored
+                  &amp; printed on tax invoice.<span class="mo-qnote">Firestore</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Monthly GSTR-1 export</strong>CSV export of taxable supply data formatted for CA / Zoho Books import.<span class="mo-qnote">FastAPI · CSV</span></div>
+                <div class="mo-qtext"><strong>Monthly GSTR-1 export</strong>CSV export of taxable supply data formatted
+                  for CA / Zoho Books import.<span class="mo-qnote">FastAPI · CSV</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Invoice delivery</strong>PDF emailed + available in-app under Billing history with 3-year retention.<span class="mo-qnote">SendGrid · GCS</span></div>
+                <div class="mo-qtext"><strong>Invoice delivery</strong>PDF emailed + available in-app under Billing
+                  history with 3-year retention.<span class="mo-qnote">SendGrid · GCS</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>RCM compliance</strong>Reverse charge flag for cloud infra costs; auto-exclusion from B2C supply list.<span class="mo-qnote">GST Act S.9(3)</span></div>
+                <div class="mo-qtext"><strong>RCM compliance</strong>Reverse charge flag for cloud infra costs;
+                  auto-exclusion from B2C supply list.<span class="mo-qnote">GST Act S.9(3)</span></div>
               </div>
             </div>
 
@@ -1483,23 +1637,28 @@
               <div class="mo-qcol-accent"></div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Churn prediction model</strong>BigQuery ML logistic model scores users 0–100 on 14-day churn probability.<span class="mo-qnote">BigQuery ML</span></div>
+                <div class="mo-qtext"><strong>Churn prediction model</strong>BigQuery ML logistic model scores users
+                  0–100 on 14-day churn probability.<span class="mo-qnote">BigQuery ML</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Win-back push</strong>High-risk users get personalised reading teaser + 20% off promo 3 days before renewal.<span class="mo-qnote">FCM · Amplitude</span></div>
+                <div class="mo-qtext"><strong>Win-back push</strong>High-risk users get personalised reading teaser +
+                  20% off promo 3 days before renewal.<span class="mo-qnote">FCM · Amplitude</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Cancel flow survey</strong>Exit-intent sheet captures cancel reason; routes to targeted save offer or pause option.<span class="mo-qnote">RevenueCat hooks</span></div>
+                <div class="mo-qtext"><strong>Cancel flow survey</strong>Exit-intent sheet captures cancel reason;
+                  routes to targeted save offer or pause option.<span class="mo-qnote">RevenueCat hooks</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Grace period</strong>7-day grace after failed renewal with retry + reduced plan fallback before full cancel.<span class="mo-qnote">Razorpay retry</span></div>
+                <div class="mo-qtext"><strong>Grace period</strong>7-day grace after failed renewal with retry + reduced
+                  plan fallback before full cancel.<span class="mo-qnote">Razorpay retry</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Re-engagement drip</strong>Churned users enter 30-day email + push sequence with astrological hooks.<span class="mo-qnote">SendGrid</span></div>
+                <div class="mo-qtext"><strong>Re-engagement drip</strong>Churned users enter 30-day email + push
+                  sequence with astrological hooks.<span class="mo-qnote">SendGrid</span></div>
               </div>
             </div>
 
@@ -1512,23 +1671,28 @@
               <div class="mo-qcol-accent"></div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Unique referral codes</strong>6-char alphanumeric code per user; shareable deep-link with UTM attribution.<span class="mo-qnote">Firebase DL · Branch</span></div>
+                <div class="mo-qtext"><strong>Unique referral codes</strong>6-char alphanumeric code per user; shareable
+                  deep-link with UTM attribution.<span class="mo-qnote">Firebase DL · Branch</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot on"></div>
-                <div class="mo-qtext"><strong>Dual incentive</strong>Referrer gets 1 free Pro month; referee gets 30-day Premium trial on first payment.<span class="mo-qnote">RevenueCat promo</span></div>
+                <div class="mo-qtext"><strong>Dual incentive</strong>Referrer gets 1 free Pro month; referee gets 30-day
+                  Premium trial on first payment.<span class="mo-qnote">RevenueCat promo</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Fraud prevention</strong>Device fingerprint &amp; phone OTP check blocks self-referral &amp; fake account chains.<span class="mo-qnote">Firebase AppCheck</span></div>
+                <div class="mo-qtext"><strong>Fraud prevention</strong>Device fingerprint &amp; phone OTP check blocks
+                  self-referral &amp; fake account chains.<span class="mo-qnote">Firebase AppCheck</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Leaderboard</strong>Top referrers this month shown on in-app board with exclusive badge rewards.<span class="mo-qnote">Firestore</span></div>
+                <div class="mo-qtext"><strong>Leaderboard</strong>Top referrers this month shown on in-app board with
+                  exclusive badge rewards.<span class="mo-qnote">Firestore</span></div>
               </div>
               <div class="mo-qrow">
                 <div class="mo-qdot"></div>
-                <div class="mo-qtext"><strong>Attribution analytics</strong>Amplitude source tracking: referral vs organic vs paid — per-channel LTV comparison.<span class="mo-qnote">Amplitude · UTM</span></div>
+                <div class="mo-qtext"><strong>Attribution analytics</strong>Amplitude source tracking: referral vs
+                  organic vs paid — per-channel LTV comparison.<span class="mo-qnote">Amplitude · UTM</span></div>
               </div>
             </div>
 
@@ -1551,7 +1715,9 @@
         <div class="la-bg"></div>
         <div class="la-grid"></div>
         <div class="la-vignette"></div>
-        <div class="la-progress-bar"><div class="la-progress-fill" id="s15-fill"></div></div>
+        <div class="la-progress-bar">
+          <div class="la-progress-fill" id="s15-fill"></div>
+        </div>
         <div class="la-slide-num">Slide 15</div>
         <div class="la-content" id="s15-content">
           <div class="la-badge">
@@ -1582,7 +1748,8 @@
               <span class="la-pillar-seq">L·02</span>
               <span class="la-pillar-icon">🛡️</span>
               <span class="la-pillar-name">Security Audit</span>
-              <p class="la-pillar-blurb">OWASP Mobile Top 10 review, penetration test, DAST scan &amp; certificate pinning.</p>
+              <p class="la-pillar-blurb">OWASP Mobile Top 10 review, penetration test, DAST scan &amp; certificate
+                pinning.</p>
             </article>
 
             <article class="la-pillar lc-store" id="lp-03" aria-label="Store Submission">
@@ -1590,7 +1757,8 @@
               <span class="la-pillar-seq">L·03</span>
               <span class="la-pillar-icon">📦</span>
               <span class="la-pillar-name">Store Submission</span>
-              <p class="la-pillar-blurb">Play Store &amp; App Store review, ASO metadata, screenshots &amp; age rating compliance.</p>
+              <p class="la-pillar-blurb">Play Store &amp; App Store review, ASO metadata, screenshots &amp; age rating
+                compliance.</p>
             </article>
 
             <article class="la-pillar lc-mkt" id="lp-04" aria-label="Marketing">
@@ -1598,7 +1766,8 @@
               <span class="la-pillar-seq">L·04</span>
               <span class="la-pillar-icon">📣</span>
               <span class="la-pillar-name">Marketing</span>
-              <p class="la-pillar-blurb">Social launch, influencer seeding, PR outreach &amp; Day-1 organic push strategy.</p>
+              <p class="la-pillar-blurb">Social launch, influencer seeding, PR outreach &amp; Day-1 organic push
+                strategy.</p>
             </article>
 
             <article class="la-pillar lc-growth" id="lp-05" aria-label="Growth Analytics">
@@ -1606,7 +1775,8 @@
               <span class="la-pillar-seq">L·05</span>
               <span class="la-pillar-icon">📈</span>
               <span class="la-pillar-name">Growth Analytics</span>
-              <p class="la-pillar-blurb">Post-launch Amplitude dashboards, store listing experiments &amp; ROAS tracking.</p>
+              <p class="la-pillar-blurb">Post-launch Amplitude dashboards, store listing experiments &amp; ROAS
+                tracking.</p>
             </article>
 
           </div>
@@ -1620,7 +1790,9 @@
         <div class="la-bg"></div>
         <div class="la-grid"></div>
         <div class="la-vignette"></div>
-        <div class="la-progress-bar"><div class="la-progress-fill" id="s16-fill"></div></div>
+        <div class="la-progress-bar">
+          <div class="la-progress-fill" id="s16-fill"></div>
+        </div>
         <div class="la-slide-num">Slide 16</div>
         <div class="la-content" id="s16-content">
           <div class="la-mod-header">
@@ -1635,8 +1807,10 @@
                 <div class="la-step-node on">01</div>
                 <div class="la-step-body">
                   <span class="la-step-title">Unit &amp; widget tests</span>
-                  <span class="la-step-desc">Flutter test suite: business logic, BLoC states &amp; widget rendering. Target 85% line coverage.</span>
-                  <div class="la-step-pills"><span class="la-step-pill">flutter_test</span><span class="la-step-pill">Mockito</span></div>
+                  <span class="la-step-desc">Flutter test suite: business logic, BLoC states &amp; widget rendering.
+                    Target 85% line coverage.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">flutter_test</span><span
+                      class="la-step-pill">Mockito</span></div>
                 </div>
               </div>
 
@@ -1644,8 +1818,10 @@
                 <div class="la-step-node on">02</div>
                 <div class="la-step-body">
                   <span class="la-step-title">Integration &amp; E2E tests</span>
-                  <span class="la-step-desc">Patrol-based E2E flows: onboarding, palm scan, payment checkout &amp; chat session.</span>
-                  <div class="la-step-pills"><span class="la-step-pill">Patrol</span><span class="la-step-pill">Firebase Test Lab</span></div>
+                  <span class="la-step-desc">Patrol-based E2E flows: onboarding, palm scan, payment checkout &amp; chat
+                    session.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Patrol</span><span class="la-step-pill">Firebase
+                      Test Lab</span></div>
                 </div>
               </div>
 
@@ -1653,8 +1829,10 @@
                 <div class="la-step-node">03</div>
                 <div class="la-step-body">
                   <span class="la-step-title">API contract testing</span>
-                  <span class="la-step-desc">FastAPI endpoints covered by Pytest suite with coverage report uploaded to CI artifacts.</span>
-                  <div class="la-step-pills"><span class="la-step-pill">Pytest</span><span class="la-step-pill">httpx</span></div>
+                  <span class="la-step-desc">FastAPI endpoints covered by Pytest suite with coverage report uploaded to
+                    CI artifacts.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Pytest</span><span
+                      class="la-step-pill">httpx</span></div>
                 </div>
               </div>
 
@@ -1662,8 +1840,10 @@
                 <div class="la-step-node">04</div>
                 <div class="la-step-body">
                   <span class="la-step-title">Accessibility audit</span>
-                  <span class="la-step-desc">Semantics tree review, screen reader (TalkBack / VoiceOver) pass &amp; contrast ratio checks.</span>
-                  <div class="la-step-pills"><span class="la-step-pill">Semantics</span><span class="la-step-pill">TalkBack</span></div>
+                  <span class="la-step-desc">Semantics tree review, screen reader (TalkBack / VoiceOver) pass &amp;
+                    contrast ratio checks.</span>
+                  <div class="la-step-pills"><span class="la-step-pill">Semantics</span><span
+                      class="la-step-pill">TalkBack</span></div>
                 </div>
               </div>
 
@@ -1671,7 +1851,8 @@
                 <div class="la-step-node">05</div>
                 <div class="la-step-body">
                   <span class="la-step-title">Device matrix testing</span>
-                  <span class="la-step-desc">25-device matrix on Firebase Test Lab: Android 10–14, iOS 15–17, various screen densities.</span>
+                  <span class="la-step-desc">25-device matrix on Firebase Test Lab: Android 10–14, iOS 15–17, various
+                    screen densities.</span>
                   <div class="la-step-pills"><span class="la-step-pill">Firebase Test Lab</span></div>
                 </div>
               </div>
@@ -1683,26 +1864,33 @@
               <div class="la-spec-block">
                 <span class="la-spec-label">OWASP Mobile Top 10</span>
                 <span class="la-spec-title">Security hardening checklist</span>
-                <p class="la-spec-desc">Certificate pinning, Keystore-backed secrets, jailbreak/root detection, Frida hook guards, M1–M10 sign-off required before submission.</p>
+                <p class="la-spec-desc">Certificate pinning, Keystore-backed secrets, jailbreak/root detection, Frida
+                  hook guards, M1–M10 sign-off required before submission.</p>
                 <div class="la-spec-metrics">
-                  <div class="la-metric"><span class="la-metric-val">M10</span><span class="la-metric-key">Checks</span></div>
-                  <div class="la-metric"><span class="la-metric-val">0</span><span class="la-metric-key">Critical</span></div>
+                  <div class="la-metric"><span class="la-metric-val">M10</span><span class="la-metric-key">Checks</span>
+                  </div>
+                  <div class="la-metric"><span class="la-metric-val">0</span><span class="la-metric-key">Critical</span>
+                  </div>
                 </div>
               </div>
 
               <div class="la-spec-block">
                 <span class="la-spec-label">Penetration test</span>
                 <span class="la-spec-title">DAST + manual pen-test</span>
-                <p class="la-spec-desc">Burp Suite DAST for API endpoints. Manual tester covers auth bypass, privilege escalation &amp; payment tampering scenarios.</p>
+                <p class="la-spec-desc">Burp Suite DAST for API endpoints. Manual tester covers auth bypass, privilege
+                  escalation &amp; payment tampering scenarios.</p>
               </div>
 
               <div class="la-spec-block">
                 <span class="la-spec-label">CI quality gate</span>
                 <span class="la-spec-title">80% coverage · 0 P0 bugs</span>
-                <p class="la-spec-desc">GitHub Actions blocks merge on coverage drop, any P0 crash, Lint error or OWASP finding. Crashlytics 7-day soak at &lt;0.1% crash-free session rate.</p>
+                <p class="la-spec-desc">GitHub Actions blocks merge on coverage drop, any P0 crash, Lint error or OWASP
+                  finding. Crashlytics 7-day soak at &lt;0.1% crash-free session rate.</p>
                 <div class="la-spec-metrics">
-                  <div class="la-metric"><span class="la-metric-val">80%</span><span class="la-metric-key">Coverage</span></div>
-                  <div class="la-metric"><span class="la-metric-val">&lt;0.1%</span><span class="la-metric-key">Crash rate</span></div>
+                  <div class="la-metric"><span class="la-metric-val">80%</span><span
+                      class="la-metric-key">Coverage</span></div>
+                  <div class="la-metric"><span class="la-metric-val">&lt;0.1%</span><span class="la-metric-key">Crash
+                      rate</span></div>
                 </div>
               </div>
 
@@ -1718,7 +1906,9 @@
         <div class="la-bg"></div>
         <div class="la-grid"></div>
         <div class="la-vignette"></div>
-        <div class="la-progress-bar"><div class="la-progress-fill" id="s17-fill"></div></div>
+        <div class="la-progress-bar">
+          <div class="la-progress-fill" id="s17-fill"></div>
+        </div>
         <div class="la-slide-num">Slide 17</div>
         <div class="la-content" id="s17-content">
           <div class="la-mod-header">
@@ -1737,23 +1927,28 @@
               <div class="la-panel-rule"></div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>ASO optimisation</strong>Keyword-rich title, short desc &amp; long desc localised for EN, HI, TA, TE.<span class="la-note">AppFollow · Sensor Tower</span></div>
+                <div class="la-text"><strong>ASO optimisation</strong>Keyword-rich title, short desc &amp; long desc
+                  localised for EN, HI, TA, TE.<span class="la-note">AppFollow · Sensor Tower</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>Store assets</strong>10 screenshots (EN+HI) + feature graphic + promo video (30s) per store.<span class="la-note">Figma · After Effects</span></div>
+                <div class="la-text"><strong>Store assets</strong>10 screenshots (EN+HI) + feature graphic + promo video
+                  (30s) per store.<span class="la-note">Figma · After Effects</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>Play Store submission</strong>Production track, staged rollout 10% → 50% → 100% over 72h monitoring window.<span class="la-note">Play Console</span></div>
+                <div class="la-text"><strong>Play Store submission</strong>Production track, staged rollout 10% → 50% →
+                  100% over 72h monitoring window.<span class="la-note">Play Console</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot"></div>
-                <div class="la-text"><strong>App Store submission</strong>TestFlight beta (100 users, 2 weeks) → App Store review → phased release.<span class="la-note">Xcode · App Store Connect</span></div>
+                <div class="la-text"><strong>App Store submission</strong>TestFlight beta (100 users, 2 weeks) → App
+                  Store review → phased release.<span class="la-note">Xcode · App Store Connect</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot"></div>
-                <div class="la-text"><strong>Rating &amp; privacy compliance</strong>Age rating 12+, privacy manifest, AT tracking transparency prompt.<span class="la-note">ATT · Google DPA</span></div>
+                <div class="la-text"><strong>Rating &amp; privacy compliance</strong>Age rating 12+, privacy manifest,
+                  AT tracking transparency prompt.<span class="la-note">ATT · Google DPA</span></div>
               </div>
             </div>
 
@@ -1766,23 +1961,28 @@
               <div class="la-panel-rule"></div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>Social media launch</strong>Teaser content: 30-day countdown reels, astrology hook posts, zodiac carousels.<span class="la-note">Instagram · YouTube Shorts</span></div>
+                <div class="la-text"><strong>Social media launch</strong>Teaser content: 30-day countdown reels,
+                  astrology hook posts, zodiac carousels.<span class="la-note">Instagram · YouTube Shorts</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>Influencer seeding</strong>Astrology &amp; spirituality micro-influencers (10K–200K) — palm reading demo videos.<span class="la-note">Impact.com</span></div>
+                <div class="la-text"><strong>Influencer seeding</strong>Astrology &amp; spirituality micro-influencers
+                  (10K–200K) — palm reading demo videos.<span class="la-note">Impact.com</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot on"></div>
-                <div class="la-text"><strong>PR outreach</strong>Hindi tech press + English app review sites. Goal: Day-1 feature on Play Store India.<span class="la-note">PRNEWS</span></div>
+                <div class="la-text"><strong>PR outreach</strong>Hindi tech press + English app review sites. Goal:
+                  Day-1 feature on Play Store India.<span class="la-note">PRNEWS</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot"></div>
-                <div class="la-text"><strong>UA campaigns</strong>Meta &amp; Google UAC campaigns targeting astrology interest segments — CPI target &lt;₹45.<span class="la-note">Meta Ads · Google UAC</span></div>
+                <div class="la-text"><strong>UA campaigns</strong>Meta &amp; Google UAC campaigns targeting astrology
+                  interest segments — CPI target &lt;₹45.<span class="la-note">Meta Ads · Google UAC</span></div>
               </div>
               <div class="la-row">
                 <div class="la-dot"></div>
-                <div class="la-text"><strong>Growth analytics</strong>Amplitude dashboard: D1/D7/D30 retention, funnel AARRR, ROAS per channel.<span class="la-note">Amplitude · Adjust</span></div>
+                <div class="la-text"><strong>Growth analytics</strong>Amplitude dashboard: D1/D7/D30 retention, funnel
+                  AARRR, ROAS per channel.<span class="la-note">Amplitude · Adjust</span></div>
               </div>
             </div>
 
@@ -1796,7 +1996,9 @@
       <div class="la-frame">
         <div class="gt-bg"></div>
         <div class="gt-vignette"></div>
-        <div class="la-progress-bar"><div class="la-progress-fill" id="s18-fill"></div></div>
+        <div class="la-progress-bar">
+          <div class="la-progress-fill" id="s18-fill"></div>
+        </div>
         <div class="la-slide-num">Slide 18</div>
         <div class="gt-content" id="s18-content">
 
@@ -1927,7 +2129,8 @@
           <!-- Deliverables per phase -->
           <div class="gt-rule"></div>
 
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.6rem 1.8rem;max-width:1000px;margin-bottom:1rem;">
+          <div
+            style="display:grid;grid-template-columns:repeat(5,1fr);gap:0.6rem 1.8rem;max-width:1000px;margin-bottom:1rem;">
             <div class="gt-deliverables">
               <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">Flutter scaffold</span>
               <span class="gt-deliv" style="color:rgba(139,92,246,0.7)">Firebase auth</span>
@@ -2008,8 +2211,7 @@
       <div class="phase-content" id="p3-content">
 
         <!-- Full-bleed image layer -->
-        <div class="scene-image" id="scene-3"
-             style="background-image: url('phase3.png')">
+        <div class="scene-image" id="scene-3" style="background-image: url('phase3.png')">
         </div>
 
         <!-- Color grade: cold → warm -->
@@ -2022,8 +2224,8 @@
             <span class="ember">✦</span>
             <span class="ember">✦</span>
           </div>
-          <h2 class="ascent-headline">Above All<br/>Limits</h2>
-          <p class="ascent-sub">The horizon is not a boundary.<br/>It is the beginning.</p>
+          <h2 class="ascent-headline">Above All<br />Limits</h2>
+          <p class="ascent-sub">The horizon is not a boundary.<br />It is the beginning.</p>
           <div class="cta-group">
             <button class="cta-primary" id="cta-enter">Enter the Field</button>
             <button class="cta-ghost" id="cta-learn">Learn More</button>
@@ -2043,4 +2245,5 @@
 
   <script src="engine.js" type="module"></script>
 </body>
+
 </html>
