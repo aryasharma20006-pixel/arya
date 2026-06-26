@@ -43,7 +43,7 @@
     radial-gradient(ellipse 90% 70% at 50% 35%, rgba(61,26,138,0.52) 0%, transparent 68%),
     radial-gradient(ellipse 130% 90% at 15% 85%, rgba(123,47,255,0.10) 0%, transparent 55%),
     radial-gradient(ellipse 100% 60% at 85% 10%, rgba(80,20,160,0.08) 0%, transparent 50%),
-    linear-gradient(180deg, #050210 0%, #0c0518 55%, #070214 100%);
+    linear-gradient(180deg, rgba(5, 2, 16, 0.7) 0%, rgba(12, 5, 24, 0.75) 55%, rgba(7, 2, 20, 0.8) 100%);
   z-index: 0;
 }
 

@@ -1054,7 +1054,7 @@ function showLoadingOverlay() {
   const overlay = document.createElement('div');
   overlay.id = 'loading-overlay';
   overlay.innerHTML = `
-    <div class="loading-logo">ANTIGRAVITY</div>
+    <div class="loading-logo">DESTINY X</div>
     <div class="loading-bar"></div>
   `;
   document.body.appendChild(overlay);
@@ -1937,6 +1937,78 @@ init();
   }, { threshold: 0.1 });
 
   [s15, s16, s17, s18].forEach(el => { if (el) orbObs.observe(el); });
+
+  // ── Scroll-driven Background Image Sequence ──────────────
+  const sequenceCanvas = document.getElementById('sequence-canvas');
+  const sCtx = sequenceCanvas?.getContext('2d');
+  const frameCount = 250;
+  const sequenceImages = [];
+  let framesLoaded = 0;
+
+  function resizeSequenceCanvas() {
+    if (!sequenceCanvas) return;
+    sequenceCanvas.width = window.innerWidth;
+    sequenceCanvas.height = window.innerHeight;
+    drawSequenceFrame();
+  }
+
+  function preloadSequenceImages() {
+    for (let i = 1; i <= frameCount; i++) {
+      const img = new Image();
+      const paddedIndex = String(i).padStart(3, '0');
+      img.src = `frames/ezgif-frame-${paddedIndex}.jpg`;
+      img.onload = () => {
+        framesLoaded++;
+        if (framesLoaded === 1 || framesLoaded % 50 === 0 || framesLoaded === frameCount) {
+          drawSequenceFrame();
+        }
+      };
+      sequenceImages.push(img);
+    }
+  }
+
+  function drawSequenceFrame() {
+    if (!sequenceCanvas || !sCtx || sequenceImages.length === 0) return;
+    
+    // Get scroll progress (0..1)
+    const sp = getScrollProgress();
+    
+    // Map progress to frame index (0..249)
+    const frameIndex = Math.min(frameCount - 1, Math.floor(sp * frameCount));
+    const img = sequenceImages[frameIndex];
+
+    if (img && img.complete) {
+      sCtx.clearRect(0, 0, sequenceCanvas.width, sequenceCanvas.height);
+
+      const canvasRatio = sequenceCanvas.width / sequenceCanvas.height;
+      const imgRatio = img.width / img.height;
+
+      let drawWidth, drawHeight, drawX, drawY;
+      if (canvasRatio > imgRatio) {
+        drawWidth = sequenceCanvas.width;
+        drawHeight = sequenceCanvas.width / imgRatio;
+        drawX = 0;
+        drawY = (sequenceCanvas.height - drawHeight) / 2;
+      } else {
+        drawWidth = sequenceCanvas.height * imgRatio;
+        drawHeight = sequenceCanvas.height;
+        drawX = (sequenceCanvas.width - drawWidth) / 2;
+        drawY = 0;
+      }
+
+      sCtx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
+    }
+  }
+
+  // Bind scroll and resize listeners for sequence
+  window.addEventListener('resize', resizeSequenceCanvas, { passive: true });
+  window.addEventListener('scroll', drawSequenceFrame, { passive: true });
+
+  // Init sequence
+  if (sequenceCanvas) {
+    resizeSequenceCanvas();
+    preloadSequenceImages();
+  }
 
   // ── 3D Card Tilt & Shine Init ────────────────────────────
   function init3DTilt() {

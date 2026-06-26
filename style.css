@@ -96,15 +96,15 @@ body {
 /* Slow Ken Burns drift on each scene */
 #scene-1 {
   animation: kb-1 18s ease-in-out infinite alternate;
-  background: radial-gradient(circle at 50% 50%, #0d1633 0%, #030712 70%, #01040a 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(13, 22, 51, 0.4) 0%, rgba(3, 7, 18, 0.75) 75%);
 }
 #scene-2 {
   animation: kb-2 22s ease-in-out infinite alternate;
-  background: radial-gradient(circle at 40% 60%, #1e194f 0%, #0f0a2b 50%, #03020c 100%);
+  background: radial-gradient(circle at 40% 60%, rgba(30, 25, 79, 0.4) 0%, rgba(15, 10, 43, 0.75) 75%);
 }
 #scene-3 {
   animation: kb-3 20s ease-in-out infinite alternate;
-  background: linear-gradient(180deg, #03020c 0%, #0a0620 40%, #2b0e03 80%, #401802 100%);
+  background: linear-gradient(180deg, rgba(3, 2, 12, 0.6) 0%, rgba(10, 6, 32, 0.6) 40%, rgba(43, 14, 3, 0.65) 85%);
 }
 
 @keyframes kb-1 {
@@ -299,7 +299,7 @@ body {
 
 /* Revealed state — full white gradient text */
 .logo-text::before {
-  content: 'ANTIGRAVITY';
+  content: 'DESTINY X';
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -786,4 +786,15 @@ body { cursor: none; }
 .la-panel:hover .card-shine {
   opacity: 1;
 }
+
+#sequence-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  background-color: #05020c;
+}
+
 
